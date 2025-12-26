@@ -1,0 +1,24 @@
+BinPath:
+  Default:
+    test app: "SSC_BLE_5_FLASH_SUSPEND"
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C3/
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: order
+DUT:
+- SSC1
+- SSC2
+Filter:
+- Default:
+    SDK: ESP32C3_IDF
+    Test App: SSC_BLE_5_FLASH_SUSPEND
+- Add:
+    test environment:  # T* means number of dut
+    - SSC_T2_BT_ShieldBox
+    - SSC_T2_BT_Simple    
+    # ID:
+    # - BLUEDROID_GAP_31001_01
+    # - BLUEDROID_GAP_31002_01
+TestApp: SSC_BLE_5_FLASH_SUSPEND
+TestEnvConfig: ~/test_env_config/ESP32C3_IDF

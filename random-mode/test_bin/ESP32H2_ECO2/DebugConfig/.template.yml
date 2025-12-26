@@ -1,0 +1,30 @@
+Start:
+  DUT: [SSC1]
+  QueryStatus:
+    - ["ram", "+FREEHEAP"]
+End:
+  DUT: [SSC1]
+  QueryStatus:
+    - ["ram", "+FREEHEAP"]
+Step:
+  DUT: [SSC1]
+  QueryStatus:
+    - ["ram -Q", "+FREEHEAP"]
+StepFail:
+  DUT: [SSC1]
+  QueryStatus:
+    - ["help", "Please refer to document ssc_commands.xlsx for detail"]
+
+packet_capture:
+# we can do capture on multiple NICs
+  - capture_nic: "wlan0"
+    capture_channel: "1 HT40+"  # use "wired" to capture ethernet packets
+    save_condition: "StepFail"  # "StepFail" or "End". save packets when step fails or test case ends
+  - capture_nic: "eth1"
+    capture_channel: "wired"
+    save_condition: "StepFail"
+
+parameters:
+# we can change the parameters for script test cases
+  test_time: 60
+  test_node: SSC1

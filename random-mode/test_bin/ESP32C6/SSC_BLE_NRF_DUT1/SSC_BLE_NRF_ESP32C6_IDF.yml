@@ -1,0 +1,34 @@
+BinPath:
+  Default:
+    test app: SSC_BLE_NRF,SSC_BLE
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C6/
+#  Specific:
+#    SSC1:
+#      test app: SSC_BLE_5_NRF
+#      path: /home/test/test_bin/ESP32C6_IDF/
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+- SSC2
+- SSC3
+- SSC4
+- SSC5
+Filter:
+- Default:
+    SDK: ESP32C6_IDF
+    Test App:
+    - 'SSC_BLE_NRF,SSC_BLE'    
+- Add:
+    test environment:  # T* means number of dut
+    - SSC_T2_BT_ShieldBox_Nrf_Dut1
+    - SSC_T3_BT_ShieldBox_Nrf_Dut1
+    - SSC_T5_BT_ShieldBox_Nrf_Dut1
+    ID:
+    - BLUEDROID_GAP_07045_05
+    - BLUEDROID_GAP_07046_05
+    - BLUEDROID_GAP_13002_05
+# TestApp: SSC_BLE_NRF
+TestEnvConfig: ~/test_env_config/ESP32C6_IDF_NRF_DUT1

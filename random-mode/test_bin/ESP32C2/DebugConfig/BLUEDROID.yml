@@ -1,0 +1,9 @@
+parameters:
+  max_whitelist_cnt: 200
+  start_index: 0
+  bug_index: 0
+  report_hardware_bug: 0
+  test_custom_limit: 0
+  ble_version: '5.0'
+
+

@@ -1,0 +1,231 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<base target=”_blank”>
+<style type="text/css">
+/* default style sheet */
+
+/* config colors for logs */
+tr.DUT1{
+    background: #C7FAE0;
+}
+tr.DUT2{
+    background: #CCE6F5;
+}
+tr.DUT3{
+    background: #F8DA79;
+}
+tr.DUT4{
+    background: #F8FEC3;
+}
+tr.DUT5{
+    background: #A6FEFE;
+}
+tr.DUT6{
+    background: #E4D3B4;
+}
+tr.LOG1{
+    background: #D9E59C;
+}
+tr.LOG2{
+    background: #DCD6FE;
+}
+tr.SOC_COM{
+    background: #FFE0C2;
+}
+tr.PC_COM{
+    background: #FFDDDD;
+}
+tr.SHELL_COM{
+    background: #CCCCDD;
+}
+tr.SOC{
+    background: #CDD2D4;
+    color: black;
+}
+/* log color ends */
+
+th.NONE{
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 15px;
+    padding-left: 20%;
+}
+
+tr.DEFAULT{
+    background: #EEEEEE;
+}
+
+table{
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    border-spacing: 0;
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    text-align: left;
+}
+tr.head{
+    background-color: #FFF947;
+    color: black;
+    border-bottom: 2px solid black;
+}
+tr.filter{
+    background-color: orange;
+    color: black;
+    border-bottom: 2px solid black;
+    display: none;
+}
+th,td{
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    max-width: 1100px;
+}
+th.index{
+    width: 90px;
+}
+th.time{
+    width: 150px;
+}
+th.port{
+    width: 120px;
+}
+
+pre{
+    font-family: inherit;
+    font-size: inherit;
+    overflow: auto;
+    max-height: 200px;
+}
+</style>
+</head>
+<body>
+<table>
+<thead>
+<tr class="head"><th class="index">Index<th class="time">Time Stamp<th class="port">Port Name<th class="log">Log Content
+<tr class="filter"><th><th><th><th>
+</thead>
+<tbody>
+<tr class="DUT2" id="1"><td>1<td>12-17 20:22:35:640<td>SSC2<td><pre>bleset name --name oT415LH2cihfp9TkkxB4ccaPWvKmU50k -l 32
+</pre></td></tr>
+<tr class="DUT2" id="2"><td>2<td>12-17 20:22:35:642<td>SSC2<td><pre>I (47909) BLE_CMD: +BLE:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT2" id="3"><td>3<td>12-17 20:22:35:652<td>SSC2<td><pre>:&gt; bleadv loadata --dtype 3 --idx 0 -n 1
+W (47916) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV
+I (47918) BLE_CMD: +BLEADV:SetAdv,OK.
+W (47919) BT_BTM: BTM_BleWriteScanRsp, Partial data write into ADV
+</pre></td></tr>
+<tr class="DUT2" id="4"><td>4<td>12-17 20:22:35:654<td>SSC2<td><pre>I (47920) BLE_CMD: +BLEADV:SetScanRes,OK.
+I (47921) BLE_CMD: +BLEADV:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT2" id="5"><td>5<td>12-17 20:22:36:647<td>SSC2<td><pre>:&gt; bleadv start
+</pre></td></tr>
+<tr class="DUT2" id="6"><td>6<td>12-17 20:22:36:652<td>SSC2<td><pre>I (48920) BLE_CMD: +BLEADV:Start,OK.
+</pre></td></tr>
+<tr class="DUT2" id="7"><td>7<td>12-17 20:22:36:654<td>SSC2<td><pre>I (48920) BLE_CMD: +BLEADV:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT1" id="8"><td>8<td>12-17 20:22:36:659<td>SSC1<td><pre>blescan config -t 2 -a 40:4c:ca:40:1e:86
+</pre></td></tr>
+<tr class="DUT1" id="9"><td>9<td>12-17 20:22:36:661<td>SSC1<td><pre>I (48832) BLE_CMD: +BLESCAN:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT1" id="10"><td>10<td>12-17 20:22:36:667<td>SSC1<td><pre>:&gt; blescan start -t 1 --idx 0
+</pre></td></tr>
+<tr class="DUT1" id="11"><td>11<td>12-17 20:22:36:669<td>SSC1<td><pre>I (48840) BLE_CMD: +BLESCAN:SetScanParam,OK.
+</pre></td></tr>
+<tr class="DUT1" id="12"><td>12<td>12-17 20:22:36:671<td>SSC1<td><pre>I (48843) BLE_CMD: +BLESCAN:Start,OK.
+</pre></td></tr>
+<tr class="DUT1" id="13"><td>13<td>12-17 20:22:36:673<td>SSC1<td><pre>I (48844) BLE_CMD: +BLESCAN:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT1" id="14"><td>14<td>12-17 20:22:36:707<td>SSC1<td><pre>:&gt; I (48876) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-21,48530.
+</pre></td></tr>
+<tr class="DUT1" id="15"><td>15<td>12-17 20:22:36:756<td>SSC1<td><pre>I (48927) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,4,31,-20,48580.
+</pre></td></tr>
+<tr class="DUT1" id="16"><td>16<td>12-17 20:22:37:641<td>SSC1<td><pre>I (49812) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-19,49466.
+</pre></td></tr>
+<tr class="DUT1" id="17"><td>17<td>12-17 20:22:38:173<td>SSC1<td><pre>I (50342) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,4,31,-15,49996.
+</pre></td></tr>
+<tr class="DUT1" id="18"><td>18<td>12-17 20:22:38:745<td>SSC1<td><pre>I (50914) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-15,50568.
+</pre></td></tr>
+<tr class="DUT1" id="19"><td>19<td>12-17 20:22:40:183<td>SSC1<td><pre>I (52353) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-20,52007.
+</pre></td></tr>
+<tr class="DUT1" id="20"><td>20<td>12-17 20:22:41:664<td>SSC1<td><pre>I (53834) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-21,53488.
+</pre></td></tr>
+<tr class="DUT1" id="21"><td>21<td>12-17 20:22:41:675<td>SSC1<td><pre>I (53846) BLE_CMD: +BLESCAN:InquiryComplete.
+</pre></td></tr>
+<tr class="DUT2" id="22"><td>22<td>12-17 20:22:41:678<td>SSC2<td><pre>:&gt; bleadv stop
+</pre></td></tr>
+<tr class="DUT2" id="23"><td>23<td>12-17 20:22:41:680<td>SSC2<td><pre>I (53949) BLE_CMD: +BLEADV:Stop,OK.
+</pre></td></tr>
+<tr class="DUT2" id="24"><td>24<td>12-17 20:22:41:685<td>SSC2<td><pre>I (53950) BLE_CMD: +BLEADV:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT2" id="25"><td>25<td>12-17 20:22:41:689<td>SSC2<td><pre>:&gt; bleset name --name 123456789012345678901234567890123 -l 6
+E (53955) BLE_CMD: +BLE:ERROR,0x102.
+Command returned non-zero error code: 0x102 (ESP_ERR_INVALID_ARG)
+:&gt; 
+</pre></td></tr>
+<tr class="DUT2" id="26"><td>26<td>12-17 20:22:41:695<td>SSC2<td><pre>:&gt; bleadv loadata --dtype 3 --idx 0 -n 1
+</pre></td></tr>
+<tr class="DUT2" id="27"><td>27<td>12-17 20:22:41:698<td>SSC2<td><pre>W (53964) BT_BTM: BTM_BleWriteAdvData, Partial data write into ADV
+I (53966) BLE_CMD: +BLEADV:SetAdv,OK.
+</pre></td></tr>
+<tr class="DUT2" id="28"><td>28<td>12-17 20:22:41:700<td>SSC2<td><pre>W (53967) BT_BTM: BTM_BleWriteScanRsp, Partial data write into ADV
+</pre></td></tr>
+<tr class="DUT2" id="29"><td>29<td>12-17 20:22:41:702<td>SSC2<td><pre>I (53969) BLE_CMD: +BLEADV:SetScanRes,OK.
+I (53969) BLE_CMD: +BLEADV:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT2" id="30"><td>30<td>12-17 20:22:42:695<td>SSC2<td><pre>:&gt; bleadv start
+</pre></td></tr>
+<tr class="DUT2" id="31"><td>31<td>12-17 20:22:42:699<td>SSC2<td><pre>I (54968) BLE_CMD: +BLEADV:Start,OK.
+</pre></td></tr>
+<tr class="DUT2" id="32"><td>32<td>12-17 20:22:42:701<td>SSC2<td><pre>I (54969) BLE_CMD: +BLEADV:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT1" id="33"><td>33<td>12-17 20:22:42:708<td>SSC1<td><pre>blescan config -t 2 -a 40:4c:ca:40:1e:86
+I (54877) BLE_CMD: +BLESCAN:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT1" id="34"><td>34<td>12-17 20:22:42:712<td>SSC1<td><pre>:&gt; blescan start -t 1 --idx 0
+</pre></td></tr>
+<tr class="DUT1" id="35"><td>35<td>12-17 20:22:42:715<td>SSC1<td><pre>I (54885) BLE_CMD: +BLESCAN:SetScanParam,OK.
+</pre></td></tr>
+<tr class="DUT1" id="36"><td>36<td>12-17 20:22:42:716<td>SSC1<td><pre>I (54889) BLE_CMD: +BLESCAN:Start,OK.
+</pre></td></tr>
+<tr class="DUT1" id="37"><td>37<td>12-17 20:22:42:718<td>SSC1<td><pre>I (54889) BLE_CMD: +BLESCAN:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT1" id="38"><td>38<td>12-17 20:22:42:842<td>SSC1<td><pre>:&gt; I (55013) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-15,54667.
+</pre></td></tr>
+<tr class="DUT1" id="39"><td>39<td>12-17 20:22:42:845<td>SSC1<td><pre>I (55014) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,4,31,-15,54668.
+</pre></td></tr>
+<tr class="DUT1" id="40"><td>40<td>12-17 20:22:43:681<td>SSC1<td><pre>I (55851) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-20,55505.
+</pre></td></tr>
+<tr class="DUT1" id="41"><td>41<td>12-17 20:22:43:683<td>SSC1<td><pre>I (55854) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,4,31,-20,55507.
+</pre></td></tr>
+<tr class="DUT1" id="42"><td>42<td>12-17 20:22:44:965<td>SSC1<td><pre>I (57135) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-15,56788.
+</pre></td></tr>
+<tr class="DUT1" id="43"><td>43<td>12-17 20:22:46:451<td>SSC1<td><pre>I (58621) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-15,58275.
+</pre></td></tr>
+<tr class="DUT1" id="44"><td>44<td>12-17 20:22:47:328<td>SSC1<td><pre>I (59496) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,4,31,-15,59150.
+</pre></td></tr>
+<tr class="DUT1" id="45"><td>45<td>12-17 20:22:47:643<td>SSC1<td><pre>I (59812) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-15,59466.
+</pre></td></tr>
+<tr class="DUT1" id="46"><td>46<td>12-17 20:22:47:720<td>SSC1<td><pre>I (59891) BLE_CMD: +BLESCAN:InquiryComplete.
+</pre></td></tr>
+<tr class="PC_COM" id="47"><td>47<td>12-17 20:22:47:721<td>PC_COM<td><pre>[STEP]: Set Result: True
+</pre></td></tr>
+<tr class="DUT2" id="48"><td>48<td>12-17 20:22:42:701<td>SSC2<td><pre>:&gt; </pre></td></tr>

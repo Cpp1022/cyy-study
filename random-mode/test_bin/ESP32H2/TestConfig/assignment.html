@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Test Assignment All</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+</head>
+
+<body>
+    <div id="main"></div>
+    <h3 align="middle">Total Execution Time: 23.44 days</h3>
+    <script type="text/javascript">
+        var param_data_template = '<span style="display:inline-block;margin-right:5px;border-radius:10px;width:10px;height:10px;background-color:__color__;"></span>__name__: __data__<br>';
+
+        var myChart = echarts.init(document.getElementById('main'));
+
+        var option = {
+            tooltip: {
+                trigger: 'axis',
+                axisPointer: {
+                    type: 'shadow'
+                },
+                formatter: function(params) {
+                    data = '<div>';
+                    for (var i=0; i< params.length; i++) {
+                        if (params[i].data > 0) {
+                            data += param_data_template.replace('__color__', params[i].color).replace('__name__', params[i].seriesName).replace('__data__', params[i].data.toString());
+                        }
+                    }
+                    data += '</div>'
+                    return data;
+                },
+            },
+            legend: {
+                type: 'scroll',
+                data: [ 'Total',
+                    
+                        
+                            'ESP32H2\nSSC_T5_BT_Simple',
+                        
+                            'ESP32H2\nSSC_T2_BT_Simple',
+                        
+                            'ESP32H2\nSSC_T2_BT_ShieldBox',
+                        
+                            'ESP32H2\nSSC_T1_BT_Simple',
+                        
+                            'ESP32H2\nSSC_T1_BT_Dongle',
+                        
+                            'ESP32H2\nSSC_T3_BT_Simple',
+                        
+                            'ESP32H2\nSSC_T2_BT_Sleep',
+                        
+                            'ESP32H2\nSSC_T2_BT_ProAtten',
+                        
+                    
+                ]
+            },
+            dataZoom: [
+                {
+                    type: 'slider',
+                    show: true,
+                    realtime: true,
+                    rangeMode: 'value',
+                    startValue: 0,
+                    endValue: 10
+                },
+            ],
+            grid: {
+                left: '3%',
+                right: '4%',
+                bottom: '3%',
+                containLabel: true
+            },
+            xAxis: [{
+                type: 'category',
+                data: [
+                    
+                        'cuiyiyi\n(No Runner) ESP32H2\nSSC_T5_BT_Simple',
+                    
+                        'cuiyiyi\n(No Runner) ESP32H2\nSSC_T2_BT_Simple',
+                    
+                        'cuiyiyi\n(No Runner) ESP32H2\nSSC_T2_BT_ShieldBox',
+                    
+                        'cuiyiyi\n(No Runner) ESP32H2\nSSC_T1_BT_Simple',
+                    
+                        'cuiyiyi\n(No Runner) ESP32H2\nSSC_T1_BT_Dongle',
+                    
+                        'cuiyiyi\n(No Runner) ESP32H2\nSSC_T3_BT_Simple',
+                    
+                        'cuiyiyi\n(No Runner) ESP32H2\nSSC_T2_BT_Sleep',
+                    
+                        'cuiyiyi\n(No Runner) ESP32H2\nSSC_T2_BT_ProAtten',
+                    
+                ],
+                axisLabel: {
+                    interval: 0,
+                    rotate: 90,
+                }
+            }],
+            yAxis: [{
+                type: 'value',
+                axisLabel: {
+                    interval: 0,
+                    formatter: function(value, index) {
+                        if (value == 0) {
+                            data = '0';
+                        } else if (value >= 1440) {
+                            data = value / 1440;
+                            data = data.toFixed(1) + " (days)";
+                        } else if (value >= 60) {
+                            data = value / 60;
+                            data = data.toFixed(0) + " (hours)";
+                        } else {
+                            data = value.toFixed(0) + " (minutes)";
+                        }
+                        return data;
+                    },
+                }
+            }],
+            series: [
+                
+                    
+                    {
+                        name: 'ESP32H2\nSSC_T5_BT_Simple',
+                        type: 'bar',
+                        stack: 'Total',
+                        data: [
+                        
+                                19328,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                        ]
+                    },
+                    
+                    {
+                        name: 'ESP32H2\nSSC_T2_BT_Simple',
+                        type: 'bar',
+                        stack: 'Total',
+                        data: [
+                        
+                                ,
+                        
+                                10406,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                        ]
+                    },
+                    
+                    {
+                        name: 'ESP32H2\nSSC_T2_BT_ShieldBox',
+                        type: 'bar',
+                        stack: 'Total',
+                        data: [
+                        
+                                ,
+                        
+                                ,
+                        
+                                3808,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                        ]
+                    },
+                    
+                    {
+                        name: 'ESP32H2\nSSC_T1_BT_Simple',
+                        type: 'bar',
+                        stack: 'Total',
+                        data: [
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                117,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                        ]
+                    },
+                    
+                    {
+                        name: 'ESP32H2\nSSC_T1_BT_Dongle',
+                        type: 'bar',
+                        stack: 'Total',
+                        data: [
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                32,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                        ]
+                    },
+                    
+                    {
+                        name: 'ESP32H2\nSSC_T3_BT_Simple',
+                        type: 'bar',
+                        stack: 'Total',
+                        data: [
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                28,
+                        
+                                ,
+                        
+                                ,
+                        
+                        ]
+                    },
+                    
+                    {
+                        name: 'ESP32H2\nSSC_T2_BT_Sleep',
+                        type: 'bar',
+                        stack: 'Total',
+                        data: [
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                24,
+                        
+                                ,
+                        
+                        ]
+                    },
+                    
+                    {
+                        name: 'ESP32H2\nSSC_T2_BT_ProAtten',
+                        type: 'bar',
+                        stack: 'Total',
+                        data: [
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                ,
+                        
+                                7,
+                        
+                        ]
+                    },
+                    
+                
+            ]
+        };
+
+        myChart.resize({ height: (document.documentElement.clientHeight * 0.8) });
+        myChart.setOption(option);
+
+        // resize chart when window size changes
+        var EventUtil = {
+            addHandler: function (element, type, handler) {
+                if (element.addEventListener) {
+                    element.addEventListener(type, handler, false);
+                } else if (element.attachEvent) {
+                    element.attachEvent("on" + type, handler);
+                } else {
+                    element["on" + type] = handler;
+                }
+            }
+        };
+        EventUtil.addHandler(window, "resize", function () {
+            myChart.resize({ height: (document.documentElement.clientHeight * 0.9) });
+            myChart.setOption(option);
+        });
+    </script>
+</body>

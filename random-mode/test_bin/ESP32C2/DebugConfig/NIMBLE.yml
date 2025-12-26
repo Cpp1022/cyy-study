@@ -1,0 +1,8 @@
+parameters:
+# we can change the parameters for script test cases
+  test_time: 1
+  mtu: 23
+  # adv_report_threshold: 120
+  read_csv_flag: 1
+  custom_debug_csv_file: '/home/cuiyiyi/MultiConfigLog/230802135759/SSC_BLE_5_ESP32C6_IDF_230802150017_FA001779/Performance/ESP32C6.BLUEDROID_GAP_05004/random_time_record.csv'
+

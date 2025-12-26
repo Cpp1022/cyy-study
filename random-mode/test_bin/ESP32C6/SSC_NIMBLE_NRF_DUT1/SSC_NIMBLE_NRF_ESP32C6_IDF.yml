@@ -1,0 +1,46 @@
+BinPath:
+  Default:
+    test app: SSC_NIMBLE_NRF
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C6/
+  Specific:
+    SSC2:
+      test app: SSC_NIMBLE
+      path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C6/
+    SSC3:
+      test app: SSC_NIMBLE
+      path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C6/
+    SSC4:
+      test app: SSC_NIMBLE
+      path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C6/  
+    SSC5:
+      test app: SSC_NIMBLE
+      path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C6/
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+- SSC2
+- SSC3
+- SSC4
+- SSC5
+Filter:
+- Default:
+    SDK: ESP32C6_IDF
+    Test App:
+    - 'SSC_NIMBLE_NRF,SSC_NIMBLE'    
+- Add:
+    test environment:  # T* means number of dut
+    - SSC_T2_BT_ShieldBox_Nrf_Dut1
+    - SSC_T3_BT_ShieldBox_Nrf_Dut1
+    - SSC_T5_BT_ShieldBox_Nrf_Dut1
+    ID:
+    - NIMBLE_GAP_20137_05
+    - NIMBLE_GAP_03013_05
+    - NIMBLE_GAP_03014_05
+    - NIMBLE_GAP_03015_05
+    - NIMBLE_GAP_03016_05
+    - NIMBLE_GAP_23099_05
+    - NIMBLE_GAP_23100_05    
+TestEnvConfig: ~/test_env_config/ESP32C6_IDF_NRF_DUT1

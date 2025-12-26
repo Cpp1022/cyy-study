@@ -1,0 +1,51 @@
+BinPath:
+  Default:
+    # test app: "SSC_BLE_5_HOST"
+    # flash bin
+    # path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32S3/
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+- SSC2
+# - SSC3
+# - SSC4
+# - SSC5
+Filter:
+- Default:
+    SDK: ESP32S3_IDF
+    # Test App: SSC_BLE_HOST
+    # category:
+    #   - Function
+- Add:
+    test environment:  # T* means number of dut
+    - SSC_T1_BT_Simple
+    - SSC_T1_BT_ShieldBox    
+    - SSC_T2_BT_Simple
+    - SSC_T2_BT_ShieldBox
+    - SSC_T3_BT_Simple
+    - SSC_T3_BT_ShieldBox
+    # - SSC_T5_BT_Simple
+    ID:
+    - BLUEDROID_GAP_30001
+    # - BLUEDROID_GAP_22016
+    # - BLUEDROID_GAP_22017
+    # - BLUEDROID_GAP_22018
+    # - BLUEDROID_GAP_22019
+    # - BLUEDROID_GAP_22020    
+    # - BLUEDROID_GAP_22021
+    # - BLUEDROID_GAP_22022
+    # - BLUEDROID_GAP_22023
+    # - BLUEDROID_GAP_22024    
+    # - BLUEDROID_GAP_22023
+    # - BLUEDROID_GAP_22024
+    # - BLUEDROID_GAP_22025
+    # - BLUEDROID_GAP_22026
+    # - BLUEDROID_GAP_22027
+    # - BLUEDROID_GAP_22028
+    # - BLUEDROID_GAP_22029
+    # - BLUEDROID_GAP_22030
+# TestApp: SSC_BLE_5
+TestEnvConfig: ~/test_env_config/ESP32S3_IDF

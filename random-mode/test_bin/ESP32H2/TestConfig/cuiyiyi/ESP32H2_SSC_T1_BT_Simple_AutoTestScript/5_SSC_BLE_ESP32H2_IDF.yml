@@ -1,0 +1,62 @@
+BinPath:
+  Default:
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32H2/
+Comments:
+  env_needed: SSC_T1_BT_Simple
+  expected_execution_time: 38
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+Filter:
+- Default:
+    SDK: ESP32H2_IDF
+    Test App: SSC_BLE
+- Add:
+    category:
+    - Performance
+    - Function
+    ID:
+    - BLUEDROID_GAP_04003
+    - BLUEDROID_GAP_04004
+    - BLUEDROID_GAP_05002
+    - BLUEDROID_GAP_05003
+    - BLUEDROID_GAP_14002
+    - BLUEDROID_GAP_14003
+    - BLUEDROID_GAP_14004
+    - BLUEDROID_GAP_14005
+    - BLUEDROID_GAP_14006
+    - BLUEDROID_GAP_15002
+    - BLUEDROID_GAP_15004
+    - BLUEDROID_GAP_15009
+    - BLUEDROID_GAP_15010
+    - BLUEDROID_GAP_19001
+    - BLUEDROID_GAP_19002
+    - BLUEDROID_GAP_23079
+    - BLUEDROID_GAP_23080
+    - BLUEDROID_GAP_23081
+    - BLUEDROID_GAP_25001
+    - BLUEDROID_GAP_25002
+    - BLUEDROID_GAP_25003
+    - BLUEDROID_GAP_25004
+    - BLUEDROID_GAP_25005
+    - BLUEDROID_GAP_25006
+    - BLUEDROID_GAP_25007
+    - BLUEDROID_GAP_25008
+    - BLUEDROID_GAP_25009
+    - BLUEDROID_GATT_01001
+    - BLUEDROID_GATT_01002
+    - BLUEDROID_GATT_26001
+    - BLUEDROID_SMP_06001
+    - BTSTK_MISC_0101
+    - BTSTK_MISC_0102
+    - BTSTK_MISC_0103
+    - BTSTK_MISC_0302
+    - BTSTK_MISC_0614
+    - BTSTK_MISC_0615
+    - BTSTK_MISC_0616
+    - BLUEDROID_GAP_03048
+TestApp: SSC_BLE
+TestEnvConfig: ~/test_env_config/ESP32H2_IDF

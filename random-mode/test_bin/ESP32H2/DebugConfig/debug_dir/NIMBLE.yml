@@ -1,0 +1,4 @@
+parameters:
+# we can change the parameters for script test cases
+  line_number: 8
+  custom_debug_csv_file: '/home/cuiyiyi/Desktop/targeta_spec_test.csv'

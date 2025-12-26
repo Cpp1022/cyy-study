@@ -1,0 +1,88 @@
+BinPath:
+  Default:
+    # path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C6/
+    path: /home/cuiyiyi/console-test-apps/test_bins/ESP32C6/QACT_BLE5_DEFAULT/
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+- SSC2
+Filter:
+- Default:
+    SDK: ESP32C6_IDF
+    Test App: QACT_BLE5_DEFAULT
+- Add:
+    test environment:  # T* means number of dut
+    - SSC_T1_BT_Simple       
+    - SSC_T2_BT_ShieldBox
+    - SSC_T2_BT_Cable
+    - SSC_T2_BT_Simple
+    sub module: ['GAP']
+    ID:
+    - BLUEDROID_GAP_01001_01
+    # - BLUEDROID_GAP_22@[13-16]
+    # - BLUEDROID_GAP_23@[1-4]
+    # - BLUEDROID_GAP_23@[42-46]
+    # - BLUEDROID_GAP_23@[84:]
+    # - BLUEDROID_GAP_23096
+    # - BLUEDROID_GAP_06001
+    # - BLUEDROID_GAP_06002
+    # - BLUEDROID_GAP_07@[13,26,34,35]
+    # - BLUEDROID_GAP_07036
+    # - BLUEDROID_GAP_07037
+    # - BLUEDROID_GAP_07038
+    # - BLUEDROID_GAP_07039
+    # - BLUEDROID_GAP_07040
+    # - BLUEDROID_GAP_07041
+    # - BLUEDROID_GAP_07035
+    # - BLUEDROID_GAP_06@[3,4,5]
+    # - BLUEDROID_GAP_14@[1:]
+    # - BLUEDROID_GAP_15@[1:]
+    # - BLUEDROID_GAP_01001
+    # - BLUEDROID_GAP_03011
+    # - BLUEDROID_GAP_03019
+    # - BLUEDROID_GAP_03058
+    # - BLUEDROID_GAP_03059
+    # - BLUEDROID_GAP_03065
+    # - BLUEDROID_GAP_09001
+    # - BLUEDROID_GAP_09002
+    # - BLUEDROID_GAP_26@[1:]
+    # - BLUEDROID_GAP_03034
+    # - BLUEDROID_GAP_03035
+    # - BLUEDROID_GAP_03040
+    # - BLUEDROID_GAP_03041
+    # - BLUEDROID_GAP_03048
+    # - BLUEDROID_GAP_21001
+    # - BLUEDROID_GAP_21002
+    # - BLUEDROID_GAP_21003
+    # - BLUEDROID_GAP_21004
+    # - BLUEDROID_GAP_21032
+    # - BLUEDROID_GAP_06008
+    # - BLUEDROID_GAP_03067
+    # - BLUEDROID_GAP_03011_01
+    # - BLUEDROID_GAP_03017_01
+    # - BLUEDROID_GAP_06001_01
+    # - BLUEDROID_GAP_12003_01
+    # - BLUEDROID_GAP_07034_01
+    # - BLUEDROID_GAP_14008_01
+    # - BLUEDROID_GAP_14009_01
+    # - BLUEDROID_GAP_14010_01
+    # - BLUEDROID_GAP_20015
+    # - BLUEDROID_GAP_20085
+    # - BLUEDROID_GAP_15008_01
+    # - BLUEDROID_GAP_21005
+    # - BLUEDROID_GAP_21006
+    # - BLUEDROID_GAP_21007
+    # - BLUEDROID_GAP_21008
+    # - BLUEDROID_GAP_21029
+    # - BLUEDROID_GAP_21032
+    # - BLUEDROID_GAP_21033
+    # - BLUEDROID_GAP_22010
+    # - BLUEDROID_GAP_22011
+    # - BLUEDROID_GAP_22@[12-18]
+
+
+TestApp: QACT_BLE5_DEFAULT
+TestEnvConfig: ~/test_env_config/ESP32C6_IDF

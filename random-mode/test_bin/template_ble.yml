@@ -1,0 +1,42 @@
+DUT:  # the number of chip which test cases needed
+  - SSC1
+  - SSC2
+BinPath:
+  Default:
+    # chip: ""  # force set chip type when flashing: `--chip xxx`, default is esp32
+    test app: "SSC_BLE"
+    path: "/NFS/test_bin/TIDF-120558/ESP32C6_IDF" 
+
+Filter:
+  - Add: # using 'add' or 'remove' for filter
+      SDK: ESP32_IDF
+      Test App: SSC_BLE
+      category:
+        # - Stress
+        # - Performance
+        - Function
+      module:
+        - BT Stack
+        # - NIMBLE
+        - BLUEDROID
+      auto test:
+        - 'Yes'
+      active:
+        - 'Yes'
+      sub module:
+        - GATT
+        - SMP
+        - GAP
+        - Misc
+      test environment:  # T* means number of dut
+        - SSC_T1_BT_Simple
+        - SSC_T2_BT_Simple
+        # - SSC_T3_BT_Simple
+        # - SSC_T5_BT_Simple
+      # test points: # select a type of test cases
+      #   # - "BLE GAP Stress test"
+      #    - "BLE GAP Duration"
+      ID: # test case ID
+        - BLUEDROID_GATT_23010
+  # - remove: remove also can be used
+TestEnvConfig: ~/test_env_config/ESP32_IDF

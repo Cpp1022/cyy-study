@@ -1,0 +1,7 @@
+cmdpath:
+  -p c6_nimble5 -d 1
+  python bin/MultiConfigRunner.py -p ~/test_bin/ESP32C6/SSC_NIMBLE_5 -d /home/cuiyiyi/test_bin/ESP32C6/DebugConfig/<branch_name>
+
+parameters:
+# we can change the parameters for script test cases
+  test_time: 15

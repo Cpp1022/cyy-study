@@ -1,0 +1,43 @@
+BinPath:
+  Default:
+    test app: "SSC_BLE_5_PERF"
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C2/SSC_BLE_5_PERF
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+- SSC2
+Filter:
+- Default:
+    SDK: ESP32C2_IDF
+    Test App: SSC_BLE_5_PERF
+- Add:
+    test environment:  # T* means number of dut
+    - SSC_T2_BT_ShieldBox
+    - SSC_T2_BT_Simple
+    ID:
+    - BLUEDROID_GAP_23011
+    - BLUEDROID_GAP_23012
+    - BLUEDROID_GAP_23013
+    - BLUEDROID_GAP_23014
+    - BLUEDROID_GAP_23015
+    - BLUEDROID_GAP_23016
+    - BLUEDROID_GAP_23017
+    - BLUEDROID_GAP_23018
+    - BLUEDROID_GAP_23019
+    - BLUEDROID_GAP_23020
+    - BLUEDROID_GAP_23021
+    - BLUEDROID_GAP_23022
+    - BLUEDROID_GAP_23023
+    - BLUEDROID_GAP_23024
+    - BLUEDROID_GAP_23025
+    - BLUEDROID_GAP_23026
+    - BLUEDROID_GAP_23027
+    - BLUEDROID_GAP_23028
+    - BLUEDROID_GAP_23029
+    - BLUEDROID_GAP_23030
+    - BLUEDROID_GAP_23031
+TestApp: SSC_BLE_5_PERF
+TestEnvConfig: ~/test_env_config/ESP32C2_IDF

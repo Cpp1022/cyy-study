@@ -1,0 +1,24 @@
+BinPath:
+  Default:
+    test app: "SSC_NIMBLE"
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C6/
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: random
+DUT:
+- SSC1
+- SSC2
+Filter:
+- Default:
+    SDK: ESP32C6_IDF
+    Test App: SSC_NIMBLE
+- Add:
+    test environment:  # T* means number of dut
+    - SSC_T2_BT_ShieldBox
+    - SSC_T2_BT_Simple
+    # ID:
+    # - NIMBLE_GAP_30005
+    # - NIMBLE_GAP_30006
+TestApp: SSC_NIMBLE
+TestEnvConfig: ~/test_env_config/ESP32C6_IDF

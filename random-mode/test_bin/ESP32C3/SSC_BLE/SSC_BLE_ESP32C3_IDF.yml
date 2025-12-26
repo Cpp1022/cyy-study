@@ -1,0 +1,26 @@
+BinPath:
+  Default:
+    path: /home/cuiyiyi/console-test-apps/test_bins/ESP32C3ECO7/QACT_BLE_DEFAULT/
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+- SSC2
+Filter:
+- Default:
+    SDK: ESP32C3_IDF
+    Test App: QACT_BLE_DEFAULT
+- Add:
+    test environment:  # T* means number of dut
+    - SSC_T1_BT_Simple       
+    - SSC_T2_BT_ShieldBox
+    - SSC_T2_BT_Cable
+    - SSC_T2_BT_Simple
+    sub module: ['GAP']
+    ID:
+    - BLUEDROID_GAP_01001
+
+TestApp: QACT_BLE_DEFAULT
+TestEnvConfig: ~/test_env_config/ESP32C3_IDF

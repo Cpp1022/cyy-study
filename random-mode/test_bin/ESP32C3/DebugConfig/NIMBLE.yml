@@ -1,0 +1,6 @@
+parameters:
+  read_file_path: '/home/cuiyiyi/document/direct_adv/localprivacy-42.csv'
+  record_file_path: '/home/cuiyiyi/document/direct_adv/localprivacy_output_test.csv'
+  # case_number: 74
+  debug_mode: 1
+  # version: 4.2

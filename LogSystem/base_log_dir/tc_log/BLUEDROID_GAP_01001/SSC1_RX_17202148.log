@@ -1,0 +1,507 @@
+
+[12-17 20:21:49:101]:
+
+:> 
+:> heap
+
+[12-17 20:21:49:206]:
+I (1378) SYS: min heap size: 262588
+I (1379) SYS: MIN_HEAPSIZE:262588
+
+[12-17 20:21:49:207]:
+I (1379) SYS: CURRENT_FREEHEAP:266620
+I (1379) SYS: INTERNAL_FREE:252148
+I (1380) SYS: MIN_FREE:262588
+:> 
+:> btc idf
+
+[12-17 20:21:49:216]:
+I (1389) BLE_CMD: IDF version: v6.1-dev-1363-g1f9a0a61bc8.
+
+[12-17 20:21:49:219]:
+I (1389) BLE_CMD: +BTC:OK.
+:> 
+:> btc lib
+
+[12-17 20:21:49:222]:
+I (1394) BLE_CMD: BT LIB version : faf1063.
+I (1395) BLE_CMD: +BTC:OK.
+
+[12-17 20:21:49:225]:
+:> 
+:> blesys
+I (1397) BLE_CMD: +BLESYS:Start.
+
+[12-17 20:21:49:226]:
+I (1398) BLE_CMD: +BLESYS:ESPIP.
+I (1398) BLE_CMD: +BLESYS:BLEV4.
+
+[12-17 20:21:49:228]:
+:> 
+:> bt query
+
+[12-17 20:21:53:228]:
+I (5400) BLE_CMD: +BT:status,ENABLE.
+I (5400) BLE_CMD: +BT:OK.
+
+[12-17 20:21:53:231]:
+:> 
+:> blereg
+I (5402) BLE_CMD: +BLE:OK.
+:> 
+:> bleget hoststatus
+
+[12-17 20:21:53:238]:
+W (5407) BT_BTC: btc_get_ble_status exit, final status=0x0
+I (5408) BLE_CMD: +BLE:Host,0.
+I (5408) BLE_CMD: +BLE:OK.
+:> 
+:> bleget ctlstatus
+
+[12-17 20:21:53:244]:
+I (5416) BLE_CMD: +BLEHCI:Controller,0.
+I (5416) BLE_CMD: +BLE:OK.
+
+[12-17 20:21:53:250]:
+:> 
+:> btmac
+
+[12-17 20:21:53:282]:
+I (5453) BLE_CMD: +BTMAC:40:4c:ca:40:1e:ba.
+I (5453) BLE_CMD: +EFUSE:0.
+:> 
+:> blescan config -n EdkN1l -t 2
+
+[12-17 20:21:56:767]:
+I (8939) BLE_CMD: +BLESCAN:OK.
+:> 
+
+[12-17 20:21:56:771]:
+:> blescan start --timeout 0 --idx 0
+
+[12-17 20:21:56:776]:
+I (8947) BLE_CMD: +BLESCAN:SetScanParam,OK.
+
+[12-17 20:21:56:788]:
+I (8950) BLE_CMD: +BLESCAN:Start,OK.
+I (8953) BLE_CMD: +BLESCAN:OK.
+:> 
+:> I (8984) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,EdkN1l,0,0,20,-21,8635.
+
+[12-17 20:21:56:814]:
+I (8985) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,EdkN1l,0,4,20,-21,8639.
+
+[12-17 20:21:56:822]:
+blescan stop
+
+[12-17 20:21:56:830]:
+I (9001) BLE_CMD: +BLESCAN:Stop,OK,(0,1,0,0),(4,1,0,0).
+I (9002) BLE_CMD: +BLESCAN:OK.
+
+[12-17 20:21:56:833]:
+:> 
+:> blesys
+
+[12-17 20:21:58:064]:
+I (10224) BLE_CMD: +BLESYS:Start.
+I (10225) BLE_CMD: +BLESYS:ESPIP.
+I (10225) BLE_CMD: +BLESYS:BLEV4.
+:> 
+:> bleget hoststatus
+
+[12-17 20:22:00:053]:
+W (12226) BT_BTC: btc_get_ble_status exit, final status=0x0
+
+[12-17 20:22:00:056]:
+I (12226) BLE_CMD: +BLE:Host,0.
+I (12227) BLE_CMD: +BLE:OK.
+:> 
+:> bleget ctlstatus
+
+[12-17 20:22:00:063]:
+I (12234) BLE_CMD: +BLEHCI:Controller,0.
+I (12235) BLE_CMD: +BLE:OK.
+
+[12-17 20:22:00:065]:
+:> 
+:> bleadv clear
+
+[12-17 20:22:03:103]:
+I (15275) BLE_CMD: +BLEADV:ClearLeagcyADV,OK.
+I (15276) BLE_CMD: +BLEADV:OK.
+
+[12-17 20:22:03:106]:
+:> 
+:> bleconf qaresetconfig
+
+[12-17 20:22:03:113]:
+I (15284) BLE_CMD: +BLE:OK.
+:> 
+:> bleget qastatus
+
+[12-17 20:22:03:122]:
+I (15294) BLE_CMD: +BLE:QAStatus,OK.
+I (15295) BLE_CMD: +BLE:OK.
+
+[12-17 20:22:03:124]:
+:> 
+:> heap
+
+[12-17 20:22:07:893]:
+I (20065) SYS: min heap size: 262240
+I (20065) SYS: MIN_HEAPSIZE:262240
+I (20066) SYS: CURRENT_FREEHEAP:266436
+I (20066) SYS: INTERNAL_FREE:251964
+
+[12-17 20:22:07:896]:
+I (20066) SYS: MIN_FREE:262240
+:> 
+:> btc idf
+
+[12-17 20:22:07:902]:
+I (20073) BLE_CMD: IDF version: v6.1-dev-1363-g1f9a0a61bc8.
+I (20073) BLE_CMD: +BTC:OK.
+:> 
+:> btc lib
+
+[12-17 20:22:07:905]:
+I (20077) BLE_CMD: BT LIB version : faf1063.
+I (20077) BLE_CMD: +BTC:OK.
+
+[12-17 20:22:07:907]:
+:> 
+:> blesys
+
+[12-17 20:22:07:910]:
+I (20081) BLE_CMD: +BLESYS:Start.
+I (20082) BLE_CMD: +BLESYS:ESPIP.
+
+[12-17 20:22:07:912]:
+I (20082) BLE_CMD: +BLESYS:BLEV4.
+:> 
+:> bt query
+
+[12-17 20:22:11:919]:
+I (24092) BLE_CMD: +BT:status,ENABLE.
+I (24092) BLE_CMD: +BT:OK.
+
+[12-17 20:22:11:922]:
+:> 
+:> blereg
+I (24094) BLE_CMD: +BLE:OK.
+:> 
+:> bleget hoststatus
+
+[12-17 20:22:11:925]:
+W (24097) BT_BTC: btc_get_ble_status exit, final status=0x0
+I (24098) BLE_CMD: +BLE:Host,0.
+I (24098) BLE_CMD: +BLE:OK.
+
+[12-17 20:22:11:927]:
+:> 
+:> bleget ctlstatus
+
+[12-17 20:22:11:940]:
+I (24103) BLE_CMD: +BLEHCI:Controller,0.
+I (24104) BLE_CMD: +BLE:OK.
+:> 
+:> btmac
+
+[12-17 20:22:11:964]:
+I (24136) BLE_CMD: +BTMAC:40:4c:ca:40:1e:ba.
+I (24137) BLE_CMD: +EFUSE:0.
+
+[12-17 20:22:11:968]:
+:> 
+:> blescan config -n 0x75F445985B29 -t 2
+
+[12-17 20:22:14:199]:
+I (26372) BLE_CMD: +BLESCAN:OK.
+
+[12-17 20:22:14:202]:
+:> 
+:> blescan start --idx 0
+
+[12-17 20:22:14:211]:
+I (26380) BLE_CMD: +BLESCAN:SetScanParam,OK.
+I (26384) BLE_CMD: +BLESCAN:Start,OK.
+I (26384) BLE_CMD: +BLESCAN:OK.
+
+[12-17 20:22:14:218]:
+:> 
+:> I (26415) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,0x75F445985B29,0,0,28,-21,26069.
+
+[12-17 20:22:14:245]:
+I (26416) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,0x75F445985B29,0,4,28,-21,26070.
+
+[12-17 20:22:14:700]:
+I (26873) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,0x75F445985B29,0,0,28,-20,26526.
+
+[12-17 20:22:14:756]:
+I (26921) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,0x75F445985B29,0,4,28,-19,26575.
+
+[12-17 20:22:15:640]:
+I (27811) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,0x75F445985B29,0,0,28,-19,27465.
+I (27812) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,0x75F445985B29,0,4,28,-20,27466.
+
+[12-17 20:22:16:648]:
+I (28803) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,0x75F445985B29,0,0,28,-21,28457.
+
+[12-17 20:22:16:682]:
+I (28854) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,0x75F445985B29,0,4,28,-19,28507.
+
+[12-17 20:22:17:875]:
+I (30046) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,0x75F445985B29,0,0,28,-19,29700.
+
+[12-17 20:22:18:770]:
+I (30941) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,0x75F445985B29,0,4,28,-19,30595.
+
+[12-17 20:22:18:995]:
+I (31167) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,0x75F445985B29,0,0,28,-15,30821.
+
+[12-17 20:22:19:215]:
+I (31386) BLE_CMD: +BLESCAN:InquiryComplete.
+
+[12-17 20:22:20:428]:
+blesys
+I (32600) BLE_CMD: +BLESYS:Start.
+I (32601) BLE_CMD: +BLESYS:ESPIP.
+
+[12-17 20:22:20:430]:
+I (32601) BLE_CMD: +BLESYS:BLEV4.
+:> 
+:> bleget hoststatus
+
+[12-17 20:22:22:430]:
+W (34603) BT_BTC: btc_get_ble_status exit, final status=0x0
+
+[12-17 20:22:22:433]:
+I (34603) BLE_CMD: +BLE:Host,0.
+I (34604) BLE_CMD: +BLE:OK.
+:> 
+:> bleget ctlstatus
+
+[12-17 20:22:22:442]:
+I (34612) BLE_CMD: +BLEHCI:Controller,0.
+I (34613) BLE_CMD: +BLE:OK.
+:> 
+:> bleadv clear
+
+[12-17 20:22:25:482]:
+I (37655) BLE_CMD: +BLEADV:ClearLeagcyADV,OK.
+I (37656) BLE_CMD: +BLEADV:OK.
+
+[12-17 20:22:25:484]:
+:> 
+:> bleconf qaresetconfig
+
+[12-17 20:22:25:492]:
+I (37663) BLE_CMD: +BLE:OK.
+:> 
+:> bleget qastatus
+
+[12-17 20:22:25:500]:
+I (37673) BLE_CMD: +BLE:QAStatus,OK.
+I (37673) BLE_CMD: +BLE:OK.
+
+[12-17 20:22:25:503]:
+:> 
+:> heap
+
+[12-17 20:22:30:349]:
+I (42521) SYS: min heap size: 261036
+I (42521) SYS: MIN_HEAPSIZE:261036
+
+[12-17 20:22:30:351]:
+I (42521) SYS: CURRENT_FREEHEAP:266332
+I (42522) SYS: INTERNAL_FREE:251860
+I (42522) SYS: MIN_FREE:261036
+:> 
+
+[12-17 20:22:30:354]:
+:> btc idf
+
+[12-17 20:22:30:358]:
+I (42530) BLE_CMD: IDF version: v6.1-dev-1363-g1f9a0a61bc8.
+
+[12-17 20:22:30:360]:
+I (42531) BLE_CMD: +BTC:OK.
+:> 
+:> btc lib
+I (42533) BLE_CMD: BT LIB version : faf1063.
+
+[12-17 20:22:30:362]:
+I (42534) BLE_CMD: +BTC:OK.
+:> 
+
+[12-17 20:22:30:369]:
+:> blesys
+I (42542) BLE_CMD: +BLESYS:Start.
+I (42542) BLE_CMD: +BLESYS:ESPIP.
+
+[12-17 20:22:30:372]:
+I (42542) BLE_CMD: +BLESYS:BLEV4.
+:> 
+:> bt query
+
+[12-17 20:22:34:372]:
+I (46544) BLE_CMD: +BT:status,ENABLE.
+I (46544) BLE_CMD: +BT:OK.
+
+[12-17 20:22:34:375]:
+:> 
+:> blereg
+
+[12-17 20:22:34:377]:
+I (46548) BLE_CMD: +BLE:OK.
+:> 
+:> bleget hoststatus
+
+[12-17 20:22:34:381]:
+W (46553) BT_BTC: btc_get_ble_status exit, final status=0x0
+
+[12-17 20:22:34:383]:
+I (46553) BLE_CMD: +BLE:Host,0.
+I (46554) BLE_CMD: +BLE:OK.
+:> 
+:> bleget ctlstatus
+
+[12-17 20:22:34:388]:
+I (46560) BLE_CMD: +BLEHCI:Controller,0.
+I (46561) BLE_CMD: +BLE:OK.
+
+[12-17 20:22:34:391]:
+:> 
+:> btmac
+
+[12-17 20:22:34:412]:
+I (46585) BLE_CMD: +BTMAC:40:4c:ca:40:1e:ba.
+I (46585) BLE_CMD: +EFUSE:0.
+
+[12-17 20:22:34:414]:
+:> 
+:> blescan config -t 2 -a 40:4c:ca:40:1e:86
+
+[12-17 20:22:36:659]:
+I (48832) BLE_CMD: +BLESCAN:OK.
+
+[12-17 20:22:36:661]:
+:> 
+:> blescan start -t 1 --idx 0
+
+[12-17 20:22:36:669]:
+I (48840) BLE_CMD: +BLESCAN:SetScanParam,OK.
+
+[12-17 20:22:36:671]:
+I (48843) BLE_CMD: +BLESCAN:Start,OK.
+I (48844) BLE_CMD: +BLESCAN:OK.
+
+[12-17 20:22:36:673]:
+:> 
+:> I (48876) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-21,48530.
+
+[12-17 20:22:36:755]:
+I (48927) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,4,31,-20,48580.
+
+[12-17 20:22:37:639]:
+I (49812) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-19,49466.
+
+[12-17 20:22:38:170]:
+I (50342) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,4,31,-15,49996.
+
+[12-17 20:22:38:742]:
+I (50914) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-15,50568.
+
+[12-17 20:22:40:181]:
+I (52353) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-20,52007.
+
+[12-17 20:22:41:662]:
+I (53834) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-21,53488.
+
+[12-17 20:22:41:675]:
+I (53846) BLE_CMD: +BLESCAN:InquiryComplete.
+
+[12-17 20:22:42:708]:
+blescan config -t 2 -a 40:4c:ca:40:1e:86
+I (54877) BLE_CMD: +BLESCAN:OK.
+:> 
+:> blescan start -t 1 --idx 0
+
+[12-17 20:22:42:715]:
+I (54885) BLE_CMD: +BLESCAN:SetScanParam,OK.
+
+[12-17 20:22:42:716]:
+I (54889) BLE_CMD: +BLESCAN:Start,OK.
+I (54889) BLE_CMD: +BLESCAN:OK.
+
+[12-17 20:22:42:718]:
+:> 
+:> I (55013) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-15,54667.
+
+[12-17 20:22:42:842]:
+I (55014) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,4,31,-15,54668.
+
+[12-17 20:22:43:680]:
+I (55851) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-20,55505.
+
+[12-17 20:22:43:681]:
+I (55854) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,4,31,-20,55507.
+
+[12-17 20:22:44:963]:
+I (57135) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-15,56788.
+
+[12-17 20:22:46:449]:
+I (58621) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-15,58275.
+
+[12-17 20:22:47:325]:
+I (59496) BLE_CMD: +BTRSP:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,4,31,-15,59150.
+
+[12-17 20:22:47:640]:
+I (59812) BLE_CMD: +BTSCAN:INQ,40:4c:ca:40:1e:86,oT415LH2cihfp9TkkxB4ccaPWv,0,0,31,-15,59466.
+
+[12-17 20:22:47:720]:
+I (59891) BLE_CMD: +BLESCAN:InquiryComplete.
+
+[12-17 20:22:48:932]:
+blesys
+I (61105) BLE_CMD: +BLESYS:Start.
+I (61105) BLE_CMD: +BLESYS:ESPIP.
+
+[12-17 20:22:48:935]:
+I (61106) BLE_CMD: +BLESYS:BLEV4.
+:> 
+:> bleget hoststatus
+
+[12-17 20:22:50:934]:
+W (63106) BT_BTC: btc_get_ble_status exit, final status=0x0
+I (63107) BLE_CMD: +BLE:Host,0.
+I (63107) BLE_CMD: +BLE:OK.
+
+[12-17 20:22:50:938]:
+:> 
+:> bleget ctlstatus
+
+[12-17 20:22:50:941]:
+I (63111) BLE_CMD: +BLEHCI:Controller,0.
+I (63112) BLE_CMD: +BLE:OK.
+:> 
+:> bleadv clear
+
+[12-17 20:22:53:985]:
+I (66157) BLE_CMD: +BLEADV:ClearLeagcyADV,OK.
+I (66157) BLE_CMD: +BLEADV:OK.
+
+[12-17 20:22:53:989]:
+:> 
+:> bleconf qaresetconfig
+
+[12-17 20:22:53:994]:
+I (66166) BLE_CMD: +BLE:OK.
+:> 
+:> bleget qastatus
+
+[12-17 20:22:54:011]:
+I (66175) BLE_CMD: +BLE:QAStatus,OK.
+I (66175) BLE_CMD: +BLE:OK.
+:> 
+:> 

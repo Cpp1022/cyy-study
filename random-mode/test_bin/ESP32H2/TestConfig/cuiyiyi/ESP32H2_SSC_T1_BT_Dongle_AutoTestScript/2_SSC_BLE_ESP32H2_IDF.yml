@@ -1,0 +1,41 @@
+BinPath:
+  Default:
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32H2/
+Comments:
+  env_needed: SSC_T1_BT_Dongle
+  expected_execution_time: 17
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+Filter:
+- Default:
+    SDK: ESP32H2_IDF
+    Test App: SSC_BLE
+- Add:
+    category:
+    - Performance
+    - Function
+    ID:
+    - BLUEDROID_GAP_02001
+    - BLUEDROID_GAP_02002
+    - BLUEDROID_GAP_02003
+    - BLUEDROID_GAP_02004
+    - BLUEDROID_GAP_02005
+    - BLUEDROID_GAP_02006
+    - BLUEDROID_GAP_02007
+    - BLUEDROID_GAP_02008
+    - BLUEDROID_GAP_02009
+    - BLUEDROID_GAP_02010
+    - BLUEDROID_GAP_03001
+    - BLUEDROID_GAP_03002
+    - BLUEDROID_GAP_03003
+    - BLUEDROID_GAP_03004
+    - BLUEDROID_GAP_03005
+    - BLUEDROID_GAP_03006
+    - BLUEDROID_GAP_03007
+    - BLUEDROID_GAP_03048
+TestApp: SSC_BLE
+TestEnvConfig: ~/test_env_config/ESP32H2_IDF
