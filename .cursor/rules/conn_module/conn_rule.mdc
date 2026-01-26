@@ -1,0 +1,71 @@
+---
+description: "蓝牙连接（Conn）模块的全面规范与规则，指导Agent根据HCI LE Create Connection和Extended Create Connection命令规范及其上下文，理解连接行为、参数定义、类生成和输出排序，并在解决相关问题时应用这些深层理解。"
+globs:
+  - "**/*" # 适用于所有文件，因为连接规范可能涉及多个文件
+alwaysApply: true # 始终应用，确保Agent在蓝牙相关任务中始终遵循此规范
+---
+
+# 蓝牙连接参数与规范
+
+本规则旨在指导 Agent 对蓝牙核心规范中连接（Conn）模块进行**深入理解**和**规则内化**。Agent 应根据提供的 HCI LE Create Connection 和 Extended Create Connection 命令规范及其上下文，全面掌握连接行为、参数定义、类生成、以及数据输出的排序规则。
+
+Agent 的目标不仅仅是执行简单的代码生成，而是能够在解决与蓝牙连接相关的各种复杂问题时，**灵活应用**这些深层理解和内化后的规则。
+
+## HCI LE 连接参数类生成指南
+
+本部分指导 Agent 根据蓝牙规范，为 HCI LE Create Connection 和 HCI LE Extended Create Connection 命令生成相应的 Python 参数类。
+
+### 核心概念与命令映射
+
+-   `Conn4Param` 类应对应 `HCI_LE_Create_Connection` 命令的参数定义。
+-   `Conn5Param` 类应对应 `HCI_LE_Extended_Create_Connection` 命令的参数定义。
+
+### 参数来源
+
+所有参数的名称、类型和有效范围，均应严格参考以下蓝牙核心规范文档：
+
+@LE_create_conn.pdf
+@Extened_create_conn.pdf
+
+### 参数提取与解析规范
+
+Agent 在处理蓝牙连接规范文档（如 `LE_create_conn.pdf` 和 `Extened_create_conn.pdf`）时，应遵循以下参数提取和解析指导：
+
+1.  **文档解析目标**: 将上传的 PDF 文件识别为包含蓝牙 HCI LE `Create Connection` 和 `Extended Create Connection` 指令的规范文档。
+2.  **指令识别**: 每个 PDF 文件（或文件中的逻辑段落）应被理解为定义了一条或多条连接指令。Agent 的目标是从这些指令中提取关键信息。
+3.  **核心信息提取**:
+    *   **指令名称**: 准确识别并记录指令的官方名称（例如 `HCI_LE_Create_Connection`）。
+    *   **参数列表**: 完整提取该指令的所有参数。
+    *   **参数详情**: 对于每个参数，提取以下关键信息：
+        *   **参数名称**: （例如 `Scan_Interval`）。
+        *   **数据类型**: （例如 `UINT16`，`BD_ADDR`）。
+        *   **有效范围/取值**: （例如 `0x0004 to 0x4000`, `Host shall set this field to all zeros`）。
+        *   **单位**: （如果适用，例如 `units of 0.625 ms`）。
+        *   **描述**: 简要说明参数的用途。
+4.  **信息理解与结构化**: 在提取参数信息后，Agent 应对其进行深入理解，并准备以结构化的方式（例如，用于生成 Python 类属性或数据结构）来使用这些信息。这意味着 Agent 需要将规范中的文本描述转化为编程中可用的数据类型和验证逻辑。
+
+<!-- 原来生效且效果较好的参数以取规则
+    * 从上传的文件是spec中conn指令的内容
+    * 从中提取不同conn指令的参数和每个参数的范围，并对内容进行理解
+    * 每个文件中的内容是一条指令 -->
+
+### 类结构参考与最佳实践
+
+在生成 `Conn4Param` 和 `Conn5Param` 类时，请参考现有 `scan` 和 `adv param class` 的实现模式，特别是它们的属性命名、类型注解、默认值以及验证逻辑。
+
+请务必包含参数的类型提示和必要的文档字符串，说明每个参数的用途和范围。
+
+@src/ble_param_definitions.py:257-270 # 引用扫描参数类的可能位置
+@src/ble_param_definitions.py:279-289 # 引用广播参数类的可能位置
+
+## 输出规则
+
+Agent 在输出与连接参数相关的代码或列表时，应遵循以下排序规则：
+
+*   若某个参数存在 `xx_1m`, `xx_2m`, `xx_3m` 等模式，则以参数主体名称为主要排序。
+*   例如，对于 `scan_interval_1m`, `scan_window_1m`, `conn_interval_min_1m`, `conn_interval_max_1m`, `scan_interval_2m`, `scan_window_2m`, `conn_interval_min_2m`, `conn_interval_max_2m`, `scan_interval_3m`, `scan_window_3m`, `conn_interval_min_3m`, `conn_interval_max_3m`：
+*   应该按以下顺序排列：
+    *   `scan_interval_1m`, `scan_interval_2m`, `scan_interval_3m`
+    *   `scan_window_1m`, `scan_window_2m`, `scan_window_3m`
+    *   `conn_interval_min_1m`, `conn_interval_min_2m`, `conn_interval_min_3m`
+    *   `conn_interval_max_1m`, `conn_interval_max_2m`, `conn_interval_max_3m`
