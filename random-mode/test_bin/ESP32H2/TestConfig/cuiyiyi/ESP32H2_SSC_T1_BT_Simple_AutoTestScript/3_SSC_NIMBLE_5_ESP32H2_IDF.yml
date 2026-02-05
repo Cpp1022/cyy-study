@@ -1,0 +1,46 @@
+BinPath:
+  Default:
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32H2/
+Comments:
+  env_needed: SSC_T1_BT_Simple
+  expected_execution_time: 23
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+Filter:
+- Default:
+    SDK: ESP32H2_IDF
+    Test App: SSC_NIMBLE_5
+- Add:
+    category:
+    - Performance
+    - Function
+    ID:
+    - NIMBLE_GAP_01003_01
+    - NIMBLE_GAP_04003_01
+    - NIMBLE_GAP_04004_01
+    - NIMBLE_GAP_14002_01
+    - NIMBLE_GAP_14003_01
+    - NIMBLE_GAP_14004_01
+    - NIMBLE_GAP_14005_01
+    - NIMBLE_GAP_14006_01
+    - NIMBLE_GAP_15002_01
+    - NIMBLE_GAP_15004_01
+    - NIMBLE_GAP_15009_01
+    - NIMBLE_GAP_15010_01
+    - NIMBLE_GAP_20129
+    - NIMBLE_GAP_20132
+    - NIMBLE_GAP_23079_01
+    - NIMBLE_GAP_23080_01
+    - NIMBLE_GAP_23081_01
+    - NIMBLE_GAP_23082
+    - NIMBLE_GAP_23083
+    - NIMBLE_GAP_23084
+    - NIMBLE_GATT_01001_01
+    - NIMBLE_GATT_01002_01
+    - NIMBLE_GATT_26001_01
+TestApp: SSC_NIMBLE_5
+TestEnvConfig: ~/test_env_config/ESP32H2_IDF

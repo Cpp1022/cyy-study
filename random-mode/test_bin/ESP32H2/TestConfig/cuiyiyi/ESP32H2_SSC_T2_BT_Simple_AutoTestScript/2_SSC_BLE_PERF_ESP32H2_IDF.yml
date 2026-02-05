@@ -1,0 +1,33 @@
+BinPath:
+  Default:
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32H2/
+Comments:
+  env_needed: SSC_T2_BT_Simple
+  expected_execution_time: 600
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+- SSC2
+Filter:
+- Default:
+    SDK: ESP32H2_IDF
+    Test App: SSC_BLE_PERF
+- Add:
+    category:
+    - Performance
+    - Function
+    ID:
+    - BLUEDROID_SMP_50001
+    - BLUEDROID_SMP_50002
+    - BLUEDROID_SMP_50003
+    - BLUEDROID_SMP_50004
+    - BLUEDROID_SMP_50005
+    - BLUEDROID_SMP_50006
+    - BLUEDROID_SMP_50007
+    - BLUEDROID_SMP_50008
+    - BLUEDROID_GATT_50019
+TestApp: SSC_BLE_PERF
+TestEnvConfig: ~/test_env_config/ESP32H2_IDF

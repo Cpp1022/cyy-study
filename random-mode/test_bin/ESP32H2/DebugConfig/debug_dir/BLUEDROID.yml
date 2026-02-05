@@ -1,0 +1,7 @@
+parameters:
+# we can change the parameters for script test cases
+  line_number: 4
+  read_file_path: '/home/cuiyiyi/document/direct_adv_test.csv'
+  # test_time: 10
+  # mtu: 251
+  # pkt_len: 251

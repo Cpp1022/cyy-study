@@ -1,0 +1,111 @@
+BinPath:
+  Default:
+    test app: SSC_BLE,SSC_BLE_NRF,SSC_BLE
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C6/
+# BinPath:
+#   Default:
+#     test app: SSC_BLE_NRF
+#     path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C6/
+#   Specific:
+#     SSC1:
+#       test app: SSC_BLE
+#       path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C6/
+#     SSC3:
+#       test app: SSC_BLE
+#       path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C6/
+#     SSC4:
+#       test app: SSC_BLE
+#       path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C6/  
+#     SSC5:
+#       test app: SSC_BLE
+#       path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C6/
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+- SSC2
+- SSC3
+- SSC4
+- SSC5
+Filter:
+- Default:
+    SDK: ESP32C6_IDF
+    Test App:
+    - 'SSC_BLE,SSC_BLE_NRF'    
+- Add:
+    test environment:  # T* means number of dut
+    - SSC_T2_BT_ShieldBox_Nrf_Dut2
+    - SSC_T3_BT_ShieldBox_Nrf_Dut2
+    - SSC_T5_BT_ShieldBox_Nrf_Dut2
+    ID:
+    - BLUEDROID_GAP_03013_06
+    - BLUEDROID_GAP_03014_06
+    - BLUEDROID_GAP_03015_06
+    - BLUEDROID_GAP_03016_06
+    - BLUEDROID_GAP_23099_06
+    - BLUEDROID_GAP_23100_06
+    - BLUEDROID_GAP_28001_06
+    - BLUEDROID_GAP_10001_06
+    - BLUEDROID_GAP_10002_06
+    - BLUEDROID_GAP_10003_06
+    - BLUEDROID_GAP_10004_06
+
+    - BLUEDROID_GAP_11001_06
+    - BLUEDROID_GAP_11002_06
+    - BLUEDROID_GAP_12001_06
+    - BLUEDROID_GAP_12002_06    
+    - BLUEDROID_GAP_12003_06
+    - BLUEDROID_GAP_15005_06
+    - BLUEDROID_GAP_15006_06
+    - BLUEDROID_GAP_15007_06    
+    - BLUEDROID_GAP_15008_06
+    - BLUEDROID_GAP_15009_06
+    - BLUEDROID_GAP_15010_06
+    - BLUEDROID_GAP_15011_06
+    - BLUEDROID_GAP_15012_06
+    - BLUEDROID_GAP_15013_06
+    - BLUEDROID_GAP_15014_06
+    - BLUEDROID_GAP_09015_06
+    - BLUEDROID_GAP_09016_06
+    - BLUEDROID_GAP_07017_06    
+    - BLUEDROID_GAP_07018_06
+    - BLUEDROID_GAP_07019_06
+    - BLUEDROID_GAP_07020_06
+    - BLUEDROID_GAP_07021_06
+    - BLUEDROID_GAP_07022_06
+    - BLUEDROID_GAP_07023_06
+    - BLUEDROID_GAP_07024_06
+    - BLUEDROID_GAP_07025_06
+    - BLUEDROID_GAP_07026_06
+    - BLUEDROID_GAP_07027_06    
+    - BLUEDROID_GAP_07028_06
+    - BLUEDROID_GAP_07029_06
+    - BLUEDROID_GAP_07030_06
+    - BLUEDROID_GAP_07031_06
+    - BLUEDROID_GAP_07032_06
+    - BLUEDROID_GAP_07033_06
+    - BLUEDROID_GAP_07034_06
+    - BLUEDROID_GAP_07035_06
+    - BLUEDROID_GAP_03017_06
+    - BLUEDROID_GAP_15012_06
+    - BLUEDROID_GAP_15013_06
+    - BLUEDROID_GAP_15014_06    
+    - BLUEDROID_GAP_03024_06
+    - BLUEDROID_GAP_03025_06
+    - BLUEDROID_GAP_03026_06
+    - BLUEDROID_GAP_03027_06
+    - BLUEDROID_GAP_03028_06
+    - BLUEDROID_GAP_03029_06
+    - BLUEDROID_GAP_03030_06
+    - BLUEDROID_GAP_03031_06
+    - BLUEDROID_GAP_04001_06    
+    - BLUEDROID_GAP_03024_06
+    - BLUEDROID_GAP_03025_06
+    - BLUEDROID_GAP_03026_06
+    - BLUEDROID_GAP_03027_06
+    - BLUEDROID_GAP_03028_06
+    - BLUEDROID_GAP_03029_06    
+# TestApp: SSC_BLE_NRF
+TestEnvConfig: ~/test_env_config/ESP32C6_IDF_NRF_DUT2

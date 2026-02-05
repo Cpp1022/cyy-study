@@ -1,0 +1,226 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<base target=”_blank”>
+<style type="text/css">
+/* default style sheet */
+
+/* config colors for logs */
+tr.DUT1{
+    background: #C7FAE0;
+}
+tr.DUT2{
+    background: #CCE6F5;
+}
+tr.DUT3{
+    background: #F8DA79;
+}
+tr.DUT4{
+    background: #F8FEC3;
+}
+tr.DUT5{
+    background: #A6FEFE;
+}
+tr.DUT6{
+    background: #E4D3B4;
+}
+tr.LOG1{
+    background: #D9E59C;
+}
+tr.LOG2{
+    background: #DCD6FE;
+}
+tr.SOC_COM{
+    background: #FFE0C2;
+}
+tr.PC_COM{
+    background: #FFDDDD;
+}
+tr.SHELL_COM{
+    background: #CCCCDD;
+}
+tr.SOC{
+    background: #CDD2D4;
+    color: black;
+}
+/* log color ends */
+
+th.NONE{
+    color: black;
+    font-weight: bold;
+    border: 1px solid black;
+    padding: 15px;
+    padding-left: 20%;
+}
+
+tr.DEFAULT{
+    background: #EEEEEE;
+}
+
+table{
+    font-family: "Courier New", Courier, monospace;
+    font-size: 16px;
+    border-spacing: 0;
+    border: 2px solid black;
+    border-collapse: collapse;
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 2%;
+    text-align: left;
+}
+tr.head{
+    background-color: #FFF947;
+    color: black;
+    border-bottom: 2px solid black;
+}
+tr.filter{
+    background-color: orange;
+    color: black;
+    border-bottom: 2px solid black;
+    display: none;
+}
+th,td{
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    max-width: 1100px;
+}
+th.index{
+    width: 90px;
+}
+th.time{
+    width: 150px;
+}
+th.port{
+    width: 120px;
+}
+
+pre{
+    font-family: inherit;
+    font-size: inherit;
+    overflow: auto;
+    max-height: 200px;
+}
+</style>
+</head>
+<body>
+<table>
+<thead>
+<tr class="head"><th class="index">Index<th class="time">Time Stamp<th class="port">Port Name<th class="log">Log Content
+<tr class="filter"><th><th><th><th>
+</thead>
+<tbody>
+<tr class="DUT1" id="1"><td>1<td>12-17 20:21:49:206<td>SSC1<td><pre>heap
+I (1378) SYS: min heap size: 262588
+</pre></td></tr>
+<tr class="DUT1" id="2"><td>2<td>12-17 20:21:49:207<td>SSC1<td><pre>I (1379) SYS: MIN_HEAPSIZE:262588
+I (1379) SYS: CURRENT_FREEHEAP:266620
+I (1379) SYS: INTERNAL_FREE:252148
+I (1380) SYS: MIN_FREE:262588
+:&gt; 
+</pre></td></tr>
+<tr class="DUT2" id="3"><td>3<td>12-17 20:21:49:209<td>SSC2<td><pre>heap
+I (1479) SYS: min heap size: 262644
+</pre></td></tr>
+<tr class="DUT2" id="4"><td>4<td>12-17 20:21:49:214<td>SSC2<td><pre>I (1479) SYS: MIN_HEAPSIZE:262644
+I (1480) SYS: CURRENT_FREEHEAP:266676
+I (1480) SYS: INTERNAL_FREE:252204
+I (1480) SYS: MIN_FREE:262644
+:&gt; 
+</pre></td></tr>
+<tr class="DUT1" id="5"><td>5<td>12-17 20:21:49:216<td>SSC1<td><pre>:&gt; btc idf
+</pre></td></tr>
+<tr class="DUT1" id="6"><td>6<td>12-17 20:21:49:219<td>SSC1<td><pre>I (1389) BLE_CMD: IDF version: v6.1-dev-1363-g1f9a0a61bc8.
+I (1389) BLE_CMD: +BTC:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT1" id="7"><td>7<td>12-17 20:21:49:222<td>SSC1<td><pre>:&gt; btc lib
+I (1394) BLE_CMD: BT LIB version : faf1063.
+</pre></td></tr>
+<tr class="DUT1" id="8"><td>8<td>12-17 20:21:49:225<td>SSC1<td><pre>I (1395) BLE_CMD: +BTC:OK.
+:&gt; 
+:&gt; blesys
+</pre></td></tr>
+<tr class="DUT1" id="9"><td>9<td>12-17 20:21:49:226<td>SSC1<td><pre>I (1397) BLE_CMD: +BLESYS:Start.
+I (1398) BLE_CMD: +BLESYS:ESPIP.
+</pre></td></tr>
+<tr class="DUT1" id="10"><td>10<td>12-17 20:21:49:228<td>SSC1<td><pre>I (1398) BLE_CMD: +BLESYS:BLEV4.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT2" id="11"><td>11<td>12-17 20:21:51:227<td>SSC2<td><pre>:&gt; blesys
+I (3496) BLE_CMD: +BLESYS:Start.
+</pre></td></tr>
+<tr class="DUT2" id="12"><td>12<td>12-17 20:21:51:233<td>SSC2<td><pre>I (3496) BLE_CMD: +BLESYS:ESPIP.
+I (3497) BLE_CMD: +BLESYS:BLEV4.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT1" id="13"><td>13<td>12-17 20:21:53:228<td>SSC1<td><pre>:&gt; bt query
+I (5400) BLE_CMD: +BT:status,ENABLE.
+</pre></td></tr>
+<tr class="DUT1" id="14"><td>14<td>12-17 20:21:53:231<td>SSC1<td><pre>I (5400) BLE_CMD: +BT:OK.
+:&gt; 
+:&gt; blereg
+I (5402) BLE_CMD: +BLE:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT1" id="15"><td>15<td>12-17 20:21:53:238<td>SSC1<td><pre>:&gt; bleget hoststatus
+W (5407) BT_BTC: btc_get_ble_status exit, final status=0x0
+I (5408) BLE_CMD: +BLE:Host,0.
+I (5408) BLE_CMD: +BLE:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT1" id="16"><td>16<td>12-17 20:21:53:242<td>SSC1<td><pre>:&gt; bleget ctlstatus
+</pre></td></tr>
+<tr class="DUT1" id="17"><td>17<td>12-17 20:21:53:244<td>SSC1<td><pre>I (5416) BLE_CMD: +BLEHCI:Controller,0.
+</pre></td></tr>
+<tr class="DUT1" id="18"><td>18<td>12-17 20:21:53:250<td>SSC1<td><pre>I (5416) BLE_CMD: +BLE:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT2" id="19"><td>19<td>12-17 20:21:53:252<td>SSC2<td><pre>:&gt; bt query
+I (5516) BLE_CMD: +BT:status,ENABLE.
+I (5517) BLE_CMD: +BT:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT2" id="20"><td>20<td>12-17 20:21:53:258<td>SSC2<td><pre>:&gt; blereg
+I (5524) BLE_CMD: +BLE:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT2" id="21"><td>21<td>12-17 20:21:53:263<td>SSC2<td><pre>:&gt; bleget hoststatus
+</pre></td></tr>
+<tr class="DUT2" id="22"><td>22<td>12-17 20:21:53:266<td>SSC2<td><pre>W (5532) BT_BTC: btc_get_ble_status exit, final status=0x0
+I (5532) BLE_CMD: +BLE:Host,0.
+I (5533) BLE_CMD: +BLE:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT2" id="23"><td>23<td>12-17 20:21:53:276<td>SSC2<td><pre>:&gt; bleget ctlstatus
+</pre></td></tr>
+<tr class="DUT2" id="24"><td>24<td>12-17 20:21:53:278<td>SSC2<td><pre>I (5547) BLE_CMD: +BLEHCI:Controller,0.
+</pre></td></tr>
+<tr class="DUT2" id="25"><td>25<td>12-17 20:21:53:281<td>SSC2<td><pre>I (5547) BLE_CMD: +BLE:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT1" id="26"><td>26<td>12-17 20:21:53:282<td>SSC1<td><pre>:&gt; btmac
+I (5453) BLE_CMD: +BTMAC:40:4c:ca:40:1e:ba.
+I (5453) BLE_CMD: +EFUSE:0.
+:&gt; 
+</pre></td></tr>
+<tr class="DUT2" id="27"><td>27<td>12-17 20:21:53:285<td>SSC2<td><pre>:&gt; btmac
+I (5554) BLE_CMD: +BTMAC:40:4c:ca:40:1e:86.
+</pre></td></tr>
+<tr class="DUT2" id="28"><td>28<td>12-17 20:21:53:290<td>SSC2<td><pre>I (5555) BLE_CMD: +EFUSE:0.
+:&gt; 
+:&gt; gatts service -z load -p 0xA2
+</pre></td></tr>
+<tr class="DUT2" id="29"><td>29<td>12-17 20:21:53:299<td>SSC2<td><pre>I (5567) BLE_CMD: +GATTS:StartService,OK,A002.
+</pre></td></tr>
+<tr class="DUT2" id="30"><td>30<td>12-17 20:21:53:302<td>SSC2<td><pre>I (5568) BLE_CMD: +GATTS:OK.
+:&gt; 
+</pre></td></tr>
+<tr class="PC_COM" id="31"><td>31<td>12-17 20:21:54:288<td>PC_COM<td><pre>[STEP]: Set Result: True
+</pre></td></tr>
+<tr class="DUT1" id="32"><td>32<td>12-17 20:21:53:282<td>SSC1<td><pre>:&gt; </pre></td></tr>
+<tr class="DUT2" id="33"><td>33<td>12-17 20:21:53:302<td>SSC2<td><pre>:&gt; </pre></td></tr>

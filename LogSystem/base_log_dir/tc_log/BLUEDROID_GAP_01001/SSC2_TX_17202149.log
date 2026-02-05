@@ -1,0 +1,198 @@
+
+[12-17 20:21:49:208]:
+heap
+
+[12-17 20:21:51:225]:
+blesys
+
+[12-17 20:21:53:252]:
+bt query
+
+[12-17 20:21:53:253]:
+blereg
+
+[12-17 20:21:53:260]:
+bleget hoststatus
+
+[12-17 20:21:53:273]:
+bleget ctlstatus
+
+[12-17 20:21:53:284]:
+btmac
+
+[12-17 20:21:53:287]:
+gatts service -z load -p 0xA2
+
+[12-17 20:21:55:746]:
+bleset name --name EdkN1l -l 6
+
+[12-17 20:21:55:753]:
+bleadv loadata --dtype 3 --idx 0 -n 1
+
+[12-17 20:21:56:754]:
+bleadv start
+
+[12-17 20:22:00:064]:
+bleget hoststatus
+
+[12-17 20:22:00:070]:
+bleget ctlstatus
+
+[12-17 20:22:03:077]:
+bleadv stop
+
+[12-17 20:22:03:083]:
+bleadv clear
+
+[12-17 20:22:03:089]:
+bleget hoststatus
+
+[12-17 20:22:03:094]:
+bleget ctlstatus
+
+[12-17 20:22:03:099]:
+gatts service -z delete
+
+[12-17 20:22:03:104]:
+bleadv clear
+
+[12-17 20:22:03:114]:
+bleconf qaresetconfig
+
+[12-17 20:22:03:127]:
+bleget qastatus
+
+[12-17 20:22:03:130]:
+bleget hoststatus
+
+[12-17 20:22:03:135]:
+bleget ctlstatus
+
+[12-17 20:22:03:143]:
+bleget qastatus
+
+[12-17 20:22:07:897]:
+heap
+
+[12-17 20:22:09:916]:
+blesys
+
+[12-17 20:22:11:941]:
+bt query
+
+[12-17 20:22:11:944]:
+blereg
+
+[12-17 20:22:11:950]:
+bleget hoststatus
+
+[12-17 20:22:11:956]:
+bleget ctlstatus
+
+[12-17 20:22:11:965]:
+btmac
+
+[12-17 20:22:13:179]:
+bleset name --name 0x75F445985B29 -l 6
+
+[12-17 20:22:13:186]:
+bleadv loadata --dtype 3 --idx 0 -n 1
+
+[12-17 20:22:14:187]:
+bleadv start
+
+[12-17 20:22:22:444]:
+bleget hoststatus
+
+[12-17 20:22:22:450]:
+bleget ctlstatus
+
+[12-17 20:22:25:455]:
+bleadv stop
+
+[12-17 20:22:25:463]:
+bleadv clear
+
+[12-17 20:22:25:468]:
+bleget hoststatus
+
+[12-17 20:22:25:475]:
+bleget ctlstatus
+
+[12-17 20:22:25:484]:
+bleadv clear
+
+[12-17 20:22:25:493]:
+bleconf qaresetconfig
+
+[12-17 20:22:25:504]:
+bleget qastatus
+
+[12-17 20:22:30:351]:
+heap
+
+[12-17 20:22:32:369]:
+blesys
+
+[12-17 20:22:34:389]:
+bt query
+
+[12-17 20:22:34:392]:
+blereg
+
+[12-17 20:22:34:394]:
+bleget hoststatus
+
+[12-17 20:22:34:397]:
+bleget ctlstatus
+
+[12-17 20:22:34:417]:
+btmac
+
+[12-17 20:22:35:634]:
+bleset name --name oT415LH2cihfp9TkkxB4ccaPWvKmU50k -l 32
+
+[12-17 20:22:35:642]:
+bleadv loadata --dtype 3 --idx 0 -n 1
+
+[12-17 20:22:36:643]:
+bleadv start
+
+[12-17 20:22:41:675]:
+bleadv stop
+
+[12-17 20:22:41:681]:
+bleset name --name 123456789012345678901234567890123 -l 6
+
+[12-17 20:22:41:691]:
+bleadv loadata --dtype 3 --idx 0 -n 1
+
+[12-17 20:22:42:692]:
+bleadv start
+
+[12-17 20:22:50:941]:
+bleget hoststatus
+
+[12-17 20:22:50:948]:
+bleget ctlstatus
+
+[12-17 20:22:53:954]:
+bleadv stop
+
+[12-17 20:22:53:960]:
+bleadv clear
+
+[12-17 20:22:53:972]:
+bleget hoststatus
+
+[12-17 20:22:53:975]:
+bleget ctlstatus
+
+[12-17 20:22:53:986]:
+bleadv clear
+
+[12-17 20:22:53:995]:
+bleconf qaresetconfig
+
+[12-17 20:22:54:012]:
+bleget qastatus

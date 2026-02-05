@@ -1,0 +1,39 @@
+BinPath:
+  Default:
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32H2/
+Comments:
+  env_needed: SSC_T3_BT_Simple
+  expected_execution_time: 14
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+- SSC2
+- SSC3
+Filter:
+- Default:
+    SDK: ESP32H2_IDF
+    Test App: SSC_BLE_5
+- Add:
+    category:
+    - Performance
+    - Function
+    ID:
+    - BLUEDROID_GAP_20010
+    - BLUEDROID_GAP_20011
+    - BLUEDROID_GAP_20012
+    - BLUEDROID_GAP_20022
+    - BLUEDROID_GAP_20023
+    - BLUEDROID_GAP_20024
+    - BLUEDROID_GAP_20052
+    - BLUEDROID_GAP_20053
+    - BLUEDROID_GAP_20054
+    - BLUEDROID_GAP_20064
+    - BLUEDROID_GAP_20065
+    - BLUEDROID_GAP_20066
+    - BLUEDROID_GAP_20094
+    - BLUEDROID_GAP_20104
+TestApp: SSC_BLE_5
+TestEnvConfig: ~/test_env_config/ESP32H2_IDF

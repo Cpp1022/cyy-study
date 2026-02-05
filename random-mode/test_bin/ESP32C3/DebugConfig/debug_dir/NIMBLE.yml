@@ -1,0 +1,3 @@
+parameters:
+# we can change the parameters for script test cases
+  custom_debug_csv_file: '/home/cuiyiyi/Downloads/tc_log_ESP32C3.NIMBLE_GAP_27002_215408/random_time_record.csv'

@@ -1,0 +1,29 @@
+BinPath:
+  Default:
+    test app: "SSC_BLE_5_PERF"
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32C6/
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+- SSC2
+# - SSC3
+# - SSC4
+# - SSC5
+Filter:
+- Default:
+    SDK: ESP32C6_IDF
+    Test App: SSC_BLE_5_PERF
+- Add:
+    test environment:  # T* means number of dut
+    - SSC_T3_BT_ShieldBox
+    - SSC_T2_BT_ShieldBox
+    - SSC_T2_BT_Simple
+    # - SSC_T5_BT_Simple  
+    ID:
+    - BLUEDROID_GATT_07036
+    - BLUEDROID_GATT_07037
+    - BLUEDROID_GATT_07038
+TestEnvConfig: ~/test_env_config/ESP32C6_IDF/

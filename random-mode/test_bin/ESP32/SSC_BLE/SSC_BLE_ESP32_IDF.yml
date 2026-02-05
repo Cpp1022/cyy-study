@@ -1,0 +1,30 @@
+BinPath:
+  Default:
+    test app: "SSC_BLE"
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32/SSC_BLE
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+- SSC2
+Filter:
+- Default:
+    SDK: ESP32_IDF
+    Test App: SSC_BLE
+- Add:
+    test environment:  # T* means number of dut
+    - SSC_T2_BT_ShieldBox
+    - SSC_T2_BT_Simple
+    ID:
+    - BLUEDROID_GAP_07037
+    - BLUEDROID_GAP_07038
+    - BLUEDROID_GAP_07039
+    - BLUEDROID_GAP_07040
+    - BLUEDROID_GAP_07041
+    - BLUEDROID_GAP_07042
+    - BLUEDROID_GAP_07043
+    - BLUEDROID_GAP_07044  
+TestApp: SSC_BLE
+TestEnvConfig: ~/test_env_config/ESP32_IDF

@@ -1,0 +1,21 @@
+BinPath:
+  Default:
+    test app: "SSC_BLE"
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32S3/
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: random
+DUT:
+- SSC1
+- SSC2
+Filter:
+- Default:
+    SDK: ESP32S3_IDF
+    Test App: SSC_BLE
+- Add:
+    test environment:  # T* means number of dut
+    - SSC_T2_BT_Simple
+    - SSC_T2_BT_ShieldBox
+TestApp: SSC_BLE
+TestEnvConfig: ~/test_env_config/ESP32S3_IDF

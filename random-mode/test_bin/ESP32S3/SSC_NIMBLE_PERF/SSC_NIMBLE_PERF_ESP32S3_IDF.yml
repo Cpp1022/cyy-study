@@ -1,0 +1,24 @@
+BinPath:
+  Default:
+    test app: "SSC_NIMBLE_PERF"
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32/SSC_NIMBLE_PERF
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+- SSC2
+Filter:
+- Default:
+    SDK: ESP32S3_IDF
+    Test App: SSC_NIMBLE_PERF
+- Add:
+    test environment:  # T* means number of dut
+    - SSC_T2_BT_ShieldBox
+    - SSC_T2_BT_Simple
+    ID:
+    - BLUEDROID_GAP_07035
+    - NIMBLE_GAP_07035
+TestApp: SSC_NIMBLE_PERF
+TestEnvConfig: ~/test_env_config/ESP32S3_IDF

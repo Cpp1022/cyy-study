@@ -1,0 +1,114 @@
+BinPath:
+  Default:
+    test app: SSC_NIMBLE_5_NRF
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32S3/
+  Specific:
+    # SSC1:
+    #   test app: SSC_NIMBLE_5_NRF
+    #   path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32S3/
+    SSC2:
+      test app: SSC_NIMBLE_5
+      path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32S3/
+    SSC3:
+      test app: SSC_NIMBLE_5
+      path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32S3/
+    SSC4:
+      test app: SSC_NIMBLE_5
+      path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32S3/  
+    SSC5:
+      test app: SSC_NIMBLE_5
+      path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32S3/
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+- SSC2
+- SSC3
+- SSC4
+- SSC5
+Filter:
+- Default:
+    SDK: ESP32S3_IDF
+    Test App:
+    - 'SSC_NIMBLE_5_NRF,SSC_NIMBLE_5'    
+- Add:
+    test environment:  # T* means number of dut
+    # - SSC_T2_BT_Simple
+    # - SSC_T2_BT_ShieldBox
+    # - SSC_T5_BT_Simple
+    - SSC_T2_BT_ShieldBox_Nrf_Dut1
+    - SSC_T3_BT_ShieldBox_Nrf_Dut1
+    - SSC_T5_BT_ShieldBox_Nrf_Dut1
+    ID:
+    # - NIMBLE_GAP_22044_01_04
+    # - NIMBLE_GAP_23004_01_04
+    # - NIMBLE_GATT_21015_01_04
+    # - NIMBLE_GATT_21017_01_04
+    # - NIMBLE_GATT_22024_01_04
+    # - NIMBLE_GATT_22026_01_04
+    # - NIMBLE_GATT_31004_01_04
+    # - NIMBLE_GATT_32004_01_04    
+    # - NIMBLE_GATT_33004_01_04
+    # - NIMBLE_GATT_34004_01_04
+    - NIMBLE_SMP_08005_01_04
+
+    # - NIMBLE_GAP_11001_04
+    # - NIMBLE_GAP_11002_04
+    # - NIMBLE_GAP_12001_04
+    # - NIMBLE_GAP_12002_04    
+    # - NIMBLE_GAP_12003_04
+    # - NIMBLE_GAP_15005_04
+    # - NIMBLE_GAP_15006_04
+    # - NIMBLE_GAP_15007_04    
+    # - NIMBLE_GAP_15008_04
+    # - NIMBLE_GAP_15009_04
+    # - NIMBLE_GAP_15010_04
+    # - NIMBLE_GAP_15011_04
+    # - NIMBLE_GAP_15012_04
+    # - NIMBLE_GAP_15013_04
+    # - NIMBLE_GAP_15014_04
+    # - NIMBLE_GAP_09015_04
+    # - NIMBLE_GAP_09016_04
+    # - NIMBLE_GAP_07017_04    
+    # - NIMBLE_GAP_07018_04
+    # - NIMBLE_GAP_07019_04
+    # - NIMBLE_GAP_07020_04
+    # - NIMBLE_GAP_07021_04
+    # - NIMBLE_GAP_07022_04
+    # - NIMBLE_GAP_07023_04
+    # - NIMBLE_GAP_07024_04
+    # - NIMBLE_GAP_07025_04
+    # - NIMBLE_GAP_07026_04
+    # - NIMBLE_GAP_07027_04    
+    # - NIMBLE_GAP_07028_04
+    # - NIMBLE_GAP_07029_04
+    # - NIMBLE_GAP_07030_04
+    # - NIMBLE_GAP_07031_04
+    # - NIMBLE_GAP_07032_04
+    # - NIMBLE_GAP_07033_04
+    # - NIMBLE_GAP_07034_04
+    # - NIMBLE_GAP_07035_04
+
+    # - NIMBLE_GAP_03017_04
+    # - NIMBLE_GAP_15012_04
+    # - NIMBLE_GAP_15013_04
+    # - NIMBLE_GAP_15014_04    
+    # - NIMBLE_GAP_03024_04
+    # - NIMBLE_GAP_03025_04
+    # - NIMBLE_GAP_03026_04
+    # - NIMBLE_GAP_03027_04
+    # - NIMBLE_GAP_03028_04
+    # - NIMBLE_GAP_03029_04
+    # - NIMBLE_GAP_03030_04
+    # - NIMBLE_GAP_03031_04
+    # - NIMBLE_GAP_04001_04    
+    # - NIMBLE_GAP_03024_04
+    # - NIMBLE_GAP_03025_04
+    # - NIMBLE_GAP_03026_04
+    # - NIMBLE_GAP_03027_04
+    # - NIMBLE_GAP_03028_04
+    # - NIMBLE_GAP_03029_04    
+# TestApp: SSC_NIMBLE_5_NRF
+TestEnvConfig: ~/test_env_config/ESP32S3_IDF_NRF_DUT1

@@ -1,0 +1,18 @@
+parameters:
+  max_whitelist_cnt: 200
+  start_index: 104
+  bug_index: 0
+  report_hardware_bug: 1
+  test_custom_limit: 0
+  ble_version: '5.0'
+  # bug_list: [62, 105, 106]
+  # ble_version: '5.0'
+  
+
+# CaseFail:
+#   Port: "SSC1"
+#   DebugCmd:
+#     - command: "ble -S -z show"
+#       checker: "+BLE:OK"
+#     - command: "ble -S -z log -f 1"
+#       checker: "+BLE:OK"

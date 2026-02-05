@@ -1,0 +1,4 @@
+parameters:
+  debug_mode: 0
+  _reboot: 0
+  # access_address_list: ['0x00000001']

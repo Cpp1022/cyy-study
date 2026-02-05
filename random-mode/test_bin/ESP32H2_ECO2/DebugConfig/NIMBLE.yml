@@ -1,0 +1,4 @@
+parameters:
+# we can change the parameters for script test cases
+  test_time: 10
+  execute count: 1

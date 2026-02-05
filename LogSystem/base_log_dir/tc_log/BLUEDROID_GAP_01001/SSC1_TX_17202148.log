@@ -1,0 +1,162 @@
+
+[12-17 20:21:49:204]:
+heap
+
+[12-17 20:21:49:215]:
+btc idf
+
+[12-17 20:21:49:220]:
+btc lib
+
+[12-17 20:21:49:223]:
+blesys
+
+[12-17 20:21:53:226]:
+bt query
+
+[12-17 20:21:53:228]:
+blereg
+
+[12-17 20:21:53:232]:
+bleget hoststatus
+
+[12-17 20:21:53:239]:
+bleget ctlstatus
+
+[12-17 20:21:53:279]:
+btmac
+
+[12-17 20:21:56:763]:
+blescan config -n EdkN1l -t 2
+
+[12-17 20:21:56:769]:
+blescan start --timeout 0 --idx 0
+
+[12-17 20:21:56:815]:
+blescan stop
+
+[12-17 20:21:58:050]:
+blesys
+
+[12-17 20:22:00:051]:
+bleget hoststatus
+
+[12-17 20:22:00:058]:
+bleget ctlstatus
+
+[12-17 20:22:03:099]:
+bleadv clear
+
+[12-17 20:22:03:109]:
+bleconf qaresetconfig
+
+[12-17 20:22:03:120]:
+bleget qastatus
+
+[12-17 20:22:07:891]:
+heap
+
+[12-17 20:22:07:898]:
+btc idf
+
+[12-17 20:22:07:903]:
+btc lib
+
+[12-17 20:22:07:907]:
+blesys
+
+[12-17 20:22:11:917]:
+bt query
+
+[12-17 20:22:11:920]:
+blereg
+
+[12-17 20:22:11:922]:
+bleget hoststatus
+
+[12-17 20:22:11:926]:
+bleget ctlstatus
+
+[12-17 20:22:11:962]:
+btmac
+
+[12-17 20:22:14:196]:
+blescan config -n 0x75F445985B29 -t 2
+
+[12-17 20:22:14:203]:
+blescan start --idx 0
+
+[12-17 20:22:20:426]:
+blesys
+
+[12-17 20:22:22:428]:
+bleget hoststatus
+
+[12-17 20:22:22:436]:
+bleget ctlstatus
+
+[12-17 20:22:25:479]:
+bleadv clear
+
+[12-17 20:22:25:488]:
+bleconf qaresetconfig
+
+[12-17 20:22:25:498]:
+bleget qastatus
+
+[12-17 20:22:30:347]:
+heap
+
+[12-17 20:22:30:356]:
+btc idf
+
+[12-17 20:22:30:359]:
+btc lib
+
+[12-17 20:22:30:367]:
+blesys
+
+[12-17 20:22:34:370]:
+bt query
+
+[12-17 20:22:34:374]:
+blereg
+
+[12-17 20:22:34:378]:
+bleget hoststatus
+
+[12-17 20:22:34:384]:
+bleget ctlstatus
+
+[12-17 20:22:34:411]:
+btmac
+
+[12-17 20:22:36:655]:
+blescan config -t 2 -a 40:4c:ca:40:1e:86
+
+[12-17 20:22:36:663]:
+blescan start -t 1 --idx 0
+
+[12-17 20:22:42:699]:
+blescan config -t 2 -a 40:4c:ca:40:1e:86
+
+[12-17 20:22:42:708]:
+blescan start -t 1 --idx 0
+
+[12-17 20:22:48:930]:
+blesys
+
+[12-17 20:22:50:931]:
+bleget hoststatus
+
+[12-17 20:22:50:935]:
+bleget ctlstatus
+
+[12-17 20:22:53:981]:
+bleadv clear
+
+[12-17 20:22:53:990]:
+bleconf qaresetconfig
+
+[12-17 20:22:54:000]:
+bleget qastatus

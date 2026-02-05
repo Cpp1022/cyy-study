@@ -1,0 +1,67 @@
+BinPath:
+  Default:
+    test app: SSC_BLE_HOST
+    path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32S3/
+  Specific:
+    # SSC1:
+    #   test app: SSC_BLE_NRF
+    #   path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32S3/
+    SSC2:
+      test app: SSC_BLE
+      path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32S3/
+    SSC3:
+      test app: SSC_BLE
+      path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32S3/
+    SSC4:
+      test app: SSC_BLE
+      path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32S3/  
+    # SSC5:
+    #   test app: SSC_BLE
+    #   path: /home/cuiyiyi/esp/SSC/ssc_bin/ESP32S3/  
+Config:
+  debug mode: false
+  execute count: 1
+  execute order: in order
+DUT:
+- SSC1
+- SSC2
+- SSC3
+- SSC4
+# - SSC5
+Filter:
+- Default:
+    SDK: ESP32S3_IDF
+    # Test App: SSC_BLE_NRF    
+- Add:
+    test environment:  # T* means number of dut
+    - SSC_T2_BT_Simple
+    - SSC_T2_BT_ShieldBox
+    - SSC_T2_BT_ShieldBox_Nrf_Dut1
+    - SSC_T3_BT_ShieldBox_Nrf_Dut1
+    # - SSC_T5_BT_ShieldBox_Nrf_Dut1
+    ID:
+    - BLUEDROID_GAP_30001_04
+    # - BLUEDROID_GAP_10002_04
+    # - BLUEDROID_GAP_10003_04
+    # - BLUEDROID_GAP_10004_04
+    # - BLUEDROID_GAP_15005_04
+    # - BLUEDROID_GAP_15006_04
+    # - BLUEDROID_GAP_15007_04
+    # - BLUEDROID_GAP_15008_04
+    # - BLUEDROID_GAP_15009_04
+    # - BLUEDROID_GAP_15010_04
+    # - BLUEDROID_GAP_15011_04
+    # - BLUEDROID_GAP_15012_04
+    # - BLUEDROID_GAP_15013_04
+    # - BLUEDROID_GAP_15014_04    
+    # - BLUEDROID_GAP_03024_04
+    # - BLUEDROID_GAP_03025_04
+    # - BLUEDROID_GAP_03026_04
+    # - BLUEDROID_GAP_03027_04
+    # - BLUEDROID_GAP_03028_04
+    # - BLUEDROID_GAP_03029_04
+    # - BLUEDROID_GAP_03030_04
+    # - BLUEDROID_GAP_03031_04
+    # - BLUEDROID_GAP_04001_04    
+# TestApp: SSC_BLE_NRF
+TestEnvConfig: ~/test_env_config/ESP32S3_IDF_NRF_DUT1

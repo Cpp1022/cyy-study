@@ -1,0 +1,18 @@
+parameters:
+  # op_test: 'ble_btc_deinit'
+  # test_time: 2
+  param_dict: {'min_exe_times': 10}
+  
+# End:
+#   Port: SSC[1-2]
+#   DebugCmd:
+#     - command: "bt -D -z disable"
+#       checker: "+BT:OK"
+#     - command: "bt -D -z deinit"
+#       checker: "+BT:OK"
+#     - command: "bt -D -z init"
+#       checker: "+BT:OK"      
+#     - command: "bt -D -z enable"
+#       checker: "+BT:OK"
+#     - command: "ble -R"
+#       checker: "+BLE:OK"      
