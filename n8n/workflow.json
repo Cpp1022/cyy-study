@@ -1,0 +1,131 @@
+{
+  "name": "GPT Code Runner (Minimal) - Revise",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "codegen",
+        "options": {}
+      },
+      "id": "1",
+      "name": "Webhook Input",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [250, 300]
+    },
+    {
+      "parameters": {
+        "model": "gpt-4o-mini",
+        "temperature": 0,
+        "messages": [
+          {
+            "role": "system",
+            "content": "你是一个代码生成助手。用户会给出需求，你只输出 Python 脚本代码，不要解释。"
+          },
+          {
+            "role": "user",
+            "content": "{{$json[\"requirement\"]}}"
+          }
+        ]
+      },
+      "id": "2",
+      "name": "GPT Generate Code",
+      "type": "n8n-nodes-base.openAi",
+      "typeVersion": 1,
+      "position": [500, 300],
+      "credentials": {
+        "openAiApi": {
+          "id": "your-openai-credentials-id",
+          "name": "OpenAI Account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "destinationPath": "{{$json[\"projectPath\"]}}/xx_test.py",
+        "data": "={{$json[\"choices\"][0][\"message\"][\"content\"]}}",
+        "overwrite": true
+      },
+      "id": "3",
+      "name": "Write xx_test.py",
+      "type": "n8n-nodes-base.writeBinaryFile",
+      "typeVersion": 1,
+      "position": [750, 300]
+    },
+    {
+      "parameters": {
+        "command": "python",
+        "arguments": [
+          "xx_test.py"
+        ],
+        "workingDirectory": "{{$json[\"projectPath\"]}}"
+      },
+      "id": "4",
+      "name": "Run Python Script",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1000, 300]
+    },
+    {
+      "parameters": {
+        "command": "cp",
+        "arguments": [
+          "xx_test.py",
+          "xx_$(date +%Y%m%d_%H%M%S).py"
+        ],
+        "workingDirectory": "{{$json[\"projectPath\"]}}"
+      },
+      "id": "5",
+      "name": "Save with Timestamp",
+      "type": "n8n-nodes-base.executeCommand",
+      "typeVersion": 1,
+      "position": [1250, 300]
+    }
+  ],
+  "connections": {
+    "Webhook Input": {
+      "main": [
+        [
+          {
+            "node": "GPT Generate Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "GPT Generate Code": {
+      "main": [
+        [
+          {
+            "node": "Write xx_test.py",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Write xx_test.py": {
+      "main": [
+        [
+          {
+            "node": "Run Python Script",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Run Python Script": {
+      "main": [
+        [
+          {
+            "node": "Save with Timestamp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  }
+}
